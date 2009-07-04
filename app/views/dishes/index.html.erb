@@ -6,14 +6,12 @@
   <% for dish in @diches %>
     <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
 
-
       <td class="list-description">
-        <dl>
-          <dt><%=h dish.name %></dt>
-       </dl>
-       <dl>
-          <dt><%=h dish.name %></dt>
-       </dl>
+         <dt>Name: <%=h dish.name %></dt>
+         <dt>Description: <%=h dish.description %></dt>
+         <dt>Price: <%=h dish.price %></dt>
+         <dt>Category: <%=h dish.category.name %></dt>
+    <br/>
       </td>
 
       <td class="list-actions">

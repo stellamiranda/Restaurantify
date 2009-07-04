@@ -17,7 +17,11 @@
     <%= f.label :price %><br />
     <%= f.text_field :price %>
   </p>
-  
+
+    </p>
+     <%= f.label :menu %>:
+   <%= collection_select(:dish, :category_id,Category.all, :id, :name) %>
+  <p>
 
   <p>
     <%= f.submit 'Update' %>
