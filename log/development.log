@@ -1,0 +1,2690 @@
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 17:49:03) [GET]
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+Completed in 25ms (View: 21, DB: 0) | 200 OK [http://localhost/restaurant]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRestaurants (20090703211856)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `restaurant`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `restaurant`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW KEYS FROM `restaurant`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 17:52:33) [GET]
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #5 of app/views/restaurant/index.html.erb:
+2:   <h1>These are ours post</h1>
+3: 
+4:   <table>
+5:   <% for post in @posts %>
+6:     <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+7: 
+8: 
+
+    app/views/restaurant/index.html.erb:5
+    app/controllers/restaurant_controller.rb:6:in `index'
+
+Rendered rescues/_trace (75.7ms)
+Rendered rescues/_request_and_response (1.9ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 17:53:02) [GET]
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #5 of app/views/restaurant/index.html.erb:
+2:   <h1>These are ours post</h1>
+3: 
+4:   <table>
+5:   <% for restaurant in @restaurants %>
+6:     <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+7: 
+8: 
+
+    app/views/restaurant/index.html.erb:5
+    app/controllers/restaurant_controller.rb:6:in `index'
+
+Rendered rescues/_trace (77.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 17:53:44) [GET]
+  [4;36;1mRestaurant Load (0.0ms)[0m   [0;1mMysql::Error: Table 'restaurantify_development.restaurants' doesn't exist: SELECT * FROM `restaurants` [0m
+
+ActiveRecord::StatementInvalid (Mysql::Error: Table 'restaurantify_development.restaurants' doesn't exist: SELECT * FROM `restaurants` ):
+  app/controllers/restaurant_controller.rb:4:in `index'
+
+Rendered rescues/_trace (97.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRestaurants (20090703230219)
+  [4;36;1mSQL (2.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090703230219')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `restaurants`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW KEYS FROM `restaurants`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 18:02:47) [GET]
+  [4;35;1mRestaurant Load (0.7ms)[0m   [0mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+Completed in 42ms (View: 1, DB: 1) | 200 OK [http://localhost/restaurant]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 18:03:28) [GET]
+  [4;36;1mRestaurant Load (1.4ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+
+ActionView::TemplateError (undefined local variable or method `post' for #<ActionView::Base:0xb77dbf74>) on line #18 of app/views/restaurant/index.html.erb:
+15: 
+16:       <td class="list-actions">
+17:         <%= link_to 'Show', restaurant %><br/>
+18:         <%= link_to 'Edit', edit_restaurant_path(post) %><br/>
+19:         <%= link_to 'Destroy', post,
+20:                     :confirm => 'Are you sure?',
+21:                     :method => :delete %>
+
+    app/views/restaurant/index.html.erb:18
+    app/views/restaurant/index.html.erb:5:in `each'
+    app/views/restaurant/index.html.erb:5
+    app/controllers/restaurant_controller.rb:6:in `index'
+
+Rendered rescues/_trace (78.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 18:04:10) [GET]
+  [4;36;1mRestaurant Load (1.0ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+
+ActionView::TemplateError (undefined local variable or method `post' for #<ActionView::Base:0xb74dc404>) on line #19 of app/views/restaurant/index.html.erb:
+16:       <td class="list-actions">
+17:         <%= link_to 'Show', restaurant %><br/>
+18:         <%= link_to 'Edit', edit_restaurant_path(restaurant) %><br/>
+19:         <%= link_to 'Destroy', post,
+20:                     :confirm => 'Are you sure?',
+21:                     :method => :delete %>
+22:       </td>
+
+    app/views/restaurant/index.html.erb:19
+    app/views/restaurant/index.html.erb:5:in `each'
+    app/views/restaurant/index.html.erb:5
+    app/controllers/restaurant_controller.rb:6:in `index'
+
+Rendered rescues/_trace (80.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 18:04:25) [GET]
+  [4;36;1mRestaurant Load (1.0ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 133ms (View: 43, DB: 3) | 200 OK [http://localhost/restaurant]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 21:57:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.8ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (53.6ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#show (for 127.0.0.1 at 2009-07-03 22:02:03) [GET]
+  Parameters: {"id"=>"t"}
+Rendering template within layouts/restaurant
+Rendering restaurant/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #3 of app/views/restaurant/show.html.erb:
+1: <p>
+2:   <b>Title:</b>
+3:   <%=h @product.title %>
+4: </p>
+5: 
+6: <p>
+
+    app/views/restaurant/show.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (122.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:02:24) [GET]
+  [4;36;1mRestaurant Load (1.0ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 102ms (View: 49, DB: 3) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:02:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.4ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:06:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.7ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:06:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.7ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:06:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (1.2ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:06:19) [GET]
+  [4;36;1mRestaurant Load (0.8ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 123ms (View: 37, DB: 3) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:06:20) [GET]
+  [4;36;1mRestaurant Load (0.8ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 101ms (View: 42, DB: 3) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:06:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.7ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:10:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.7ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:10:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.7ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:10:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.8ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:10:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.5ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:10:29) [GET]
+  [4;36;1mRestaurant Load (0.7ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 108ms (View: 29, DB: 3) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:10:31) [GET]
+  [4;36;1mRestaurant Load (0.8ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 85ms (View: 36, DB: 3) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:10:37) [GET]
+  [4;36;1mRestaurant Load (0.7ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 121ms (View: 67, DB: 3) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:10:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.7ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:12:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.5ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:12:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.7ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (50.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:12:30) [GET]
+  [4;36;1mRestaurant Load (0.7ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 125ms (View: 41, DB: 3) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:12:31) [GET]
+  [4;36;1mRestaurant Load (0.8ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 94ms (View: 41, DB: 3) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:12:39) [GET]
+  [4;36;1mRestaurant Load (0.8ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 90ms (View: 40, DB: 3) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:12:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.7ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (51.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:14:03) [GET]
+  [4;36;1mRestaurant Load (0.5ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 97ms (View: 46, DB: 2) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:14:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.7ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.7ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:14:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.5ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:14:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.7ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:14:39) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.5ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:14:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.4ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:14:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.7ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:14:55) [GET]
+  [4;36;1mRestaurant Load (0.7ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 118ms (View: 30, DB: 2) | 200 OK [http://localhost/restaurant]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:14:57) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mRestaurant Columns (3.8ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (1.0ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 2) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:16:16) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mRestaurant Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.7ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 2) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (46.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:16:27) [GET]
+  [4;36;1mRestaurant Load (0.8ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 110ms (View: 31, DB: 2) | 200 OK [http://localhost/restaurant]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:16:28) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.7ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:20:34) [GET]
+  [4;36;1mRestaurant Load (0.4ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 92ms (View: 45, DB: 2) | 200 OK [http://localhost/restaurant]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:20:35) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.7ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.7ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:21:51) [GET]
+  [4;36;1mRestaurant Load (1.0ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 125ms (View: 35, DB: 5) | 200 OK [http://localhost/restaurant]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:21:58) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mRestaurant Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.4ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 2) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:23:45) [GET]
+  [4;36;1mRestaurant Load (0.7ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 109ms (View: 30, DB: 3) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:23:47) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.7ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#show (for 127.0.0.1 at 2009-07-03 22:23:50) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/restaurant
+Rendering restaurant/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #3 of app/views/restaurant/show.html.erb:
+1: <p>
+2:   <b>Title:</b>
+3:   <%=h @product.title %>
+4: </p>
+5: 
+6: <p>
+
+    app/views/restaurant/show.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (139.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:26:55) [GET]
+  [4;36;1mRestaurant Load (0.8ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 91ms (View: 37, DB: 3) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:26:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.4ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/edit.html.erb:
+1: <h1>Editing Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/edit.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#show (for 127.0.0.1 at 2009-07-03 22:26:59) [GET]
+  Parameters: {"id"=>"1"}
+Rendering template within layouts/restaurant
+Rendering restaurant/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #3 of app/views/restaurant/show.html.erb:
+1: <p>
+2:   <b>Title:</b>
+3:   <%=h @product.title %>
+4: </p>
+5: 
+6: <p>
+
+    app/views/restaurant/show.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (103.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#destroy (for 127.0.0.1 at 2009-07-03 22:27:08) [DELETE]
+  Parameters: {"authenticity_token"=>"xqtGr5lH5+7YXS4y+WuaFDa//KR0SGd+vuoKqBwEmwE=", "id"=>"1"}
+
+ActionController::UnknownAction (No action responded to destroy. Actions: edit and index):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:30:10) [GET]
+  [4;36;1mRestaurant Load (0.8ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 101ms (View: 42, DB: 3) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#show (for 127.0.0.1 at 2009-07-03 22:30:13) [GET]
+  Parameters: {"id"=>"2"}
+Rendering template within layouts/restaurant
+Rendering restaurant/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #3 of app/views/restaurant/show.html.erb:
+1: <p>
+2:   <b>Title:</b>
+3:   <%=h @product.title %>
+4: </p>
+5: 
+6: <p>
+
+    app/views/restaurant/show.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (72.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:40:26) [GET]
+  [4;36;1mRestaurant Load (1.1ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 148ms (View: 78, DB: 3) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:40:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (3.8ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.9ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+Completed in 98ms (View: 12, DB: 5) | 200 OK [http://localhost/restaurant/1/edit]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-03 22:41:53) [GET]
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (66.3ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:42:17) [GET]
+  [4;36;1mRestaurant Load (0.7ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 118ms (View: 35, DB: 3) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-03 22:42:19) [GET]
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New restaurant</h1>
+2: 
+3: <% form_for(@restaurants) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (69.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:42:27) [GET]
+  [4;36;1mRestaurant Load (1.6ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 126ms (View: 42, DB: 4) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-03 22:42:29) [GET]
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New restaurant</h1>
+2: 
+3: <% form_for(@restaurants) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:45:06) [GET]
+  [4;36;1mRestaurant Load (0.7ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 122ms (View: 41, DB: 3) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-03 22:45:12) [GET]
+
+NameError (uninitialized constant RestaurantController::Product):
+  app/controllers/restaurant_controller.rb:15:in `new'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (66.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:45:37) [GET]
+  [4;36;1mRestaurant Load (0.8ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 105ms (View: 39, DB: 3) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-03 22:45:38) [GET]
+  [4;36;1mRestaurant Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (undefined method `restaurants_path' for #<ActionView::Base:0xb76bd8b8>) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    app/controllers/restaurant_controller.rb:17:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-03 22:46:03) [GET]
+  [4;35;1mRestaurant Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (undefined method `restaurants_path' for #<ActionView::Base:0xb7390adc>) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    app/controllers/restaurant_controller.rb:17:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:47:14) [GET]
+  [4;36;1mRestaurant Load (0.7ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 98ms (View: 27, DB: 2) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-03 22:47:15) [GET]
+  [4;36;1mRestaurant Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (undefined method `restaurants_path' for #<ActionView::Base:0xb76bde58>) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    app/controllers/restaurant_controller.rb:17:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-03 22:49:25) [GET]
+  [4;35;1mRestaurant Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (undefined method `restaurants_path' for #<ActionView::Base:0xb739ce7c>) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    app/controllers/restaurant_controller.rb:17:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-03 22:49:26) [GET]
+  [4;36;1mRestaurant Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (undefined method `restaurants_path' for #<ActionView::Base:0xb73922ec>) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    app/controllers/restaurant_controller.rb:17:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (107.2ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-03 22:49:27) [GET]
+  [4;35;1mRestaurant Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (undefined method `restaurants_path' for #<ActionView::Base:0xb73a52fc>) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    app/controllers/restaurant_controller.rb:17:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-03 22:50:37) [GET]
+  [4;36;1mRestaurant Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New Restaurant</h1>
+2: 
+3: <% form_for(@restaurants) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    app/controllers/restaurant_controller.rb:17:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-03 22:55:08) [GET]
+  [4;36;1mRestaurant Load (1.0ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 141ms (View: 73, DB: 2) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-03 22:55:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (2.2ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.9ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+Completed in 99ms (View: 12, DB: 4) | 200 OK [http://localhost/restaurant/1/edit]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-03 22:55:17) [GET]
+  [4;36;1mRestaurant Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New Restaurant</h1>
+2: 
+3: <% form_for(@restaurants) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    app/controllers/restaurant_controller.rb:17:in `new'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (74.6ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (20.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-04 10:29:21) [GET]
+
+ActionController::RoutingError (No route matches "/restaurants" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-04 10:29:24) [GET]
+  [4;36;1mRestaurant Load (47.3ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 203ms (View: 82, DB: 50) | 200 OK [http://localhost/restaurant]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#edit (for 127.0.0.1 at 2009-07-04 10:29:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mRestaurant Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (25.3ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 1) [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/edit
+Completed in 152ms (View: 16, DB: 28) | 200 OK [http://localhost/restaurant/1/edit]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-04 10:29:33) [GET]
+  [4;36;1mRestaurant Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New Restaurant</h1>
+2: 
+3: <% form_for(@restaurants) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    app/controllers/restaurant_controller.rb:17:in `new'
+
+Rendered rescues/_trace (81.2ms)
+Rendered rescues/_request_and_response (1.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-04 10:31:40) [GET]
+  [4;35;1mRestaurant Load (1.1ms)[0m   [0mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;36;1mRestaurant Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Completed in 127ms (View: 42, DB: 3) | 200 OK [http://localhost/restaurant/]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-04 10:31:42) [GET]
+  [4;35;1mRestaurant Columns (2.9ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (undefined method `restaurants_path' for #<ActionView::Base:0xb774b848>) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New Restaurant</h1>
+2: 
+3: <% form_for(@restaurants) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    app/controllers/restaurant_controller.rb:25:in `new'
+
+Rendered rescues/_trace (81.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-04 10:32:12) [GET]
+  [4;36;1mRestaurant Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    app/controllers/restaurant_controller.rb:25:in `new'
+
+Rendered rescues/_trace (80.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-04 10:33:45) [GET]
+  [4;35;1mRestaurant Load (1.0ms)[0m   [0mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;36;1mRestaurant Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Completed in 140ms (View: 37, DB: 4) | 200 OK [http://localhost/restaurant]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-04 10:33:47) [GET]
+  [4;35;1mRestaurant Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    app/controllers/restaurant_controller.rb:26:in `new'
+
+Rendered rescues/_trace (78.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-04 10:34:16) [GET]
+  [4;36;1mRestaurant Load (1.0ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;35;1mRestaurant Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 144ms (View: 44, DB: 4) | 200 OK [http://localhost/restaurant/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-04 10:34:18) [GET]
+  [4;36;1mRestaurant Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (undefined method `restaurants_path' for #<ActionView::Base:0xb774f218>) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New Restaurant</h1>
+2: 
+3: <% form_for(@restaurants) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    app/controllers/restaurant_controller.rb:26:in `new'
+
+Rendered rescues/_trace (80.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-04 10:35:00) [GET]
+  [4;35;1mRestaurant Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New Restaurant</h1>
+2: 
+3: <% form_for(@restaurants) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    app/controllers/restaurant_controller.rb:18:in `new'
+
+Rendered rescues/_trace (80.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-04 10:35:11) [GET]
+  [4;36;1mRestaurant Columns (2.4ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (undefined method `restaurants_path' for #<ActionView::Base:0xb745d9d8>) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    app/controllers/restaurant_controller.rb:18:in `new'
+
+Rendered rescues/_trace (81.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-04 10:35:35) [GET]
+  [4;35;1mRestaurant Load (1.5ms)[0m   [0mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;36;1mRestaurant Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Completed in 153ms (View: 47, DB: 4) | 200 OK [http://localhost/restaurant]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-04 10:35:37) [GET]
+  [4;35;1mRestaurant Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (undefined method `restaurants_path' for #<ActionView::Base:0xb77517fc>) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    app/controllers/restaurant_controller.rb:18:in `new'
+
+Rendered rescues/_trace (82.7ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-04 10:36:20) [GET]
+  [4;36;1mRestaurant Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (undefined method `restaurants_path' for #<ActionView::Base:0xb79fb980>) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    app/controllers/restaurant_controller.rb:18:in `new'
+
+Rendered rescues/_trace (80.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-04 10:36:23) [GET]
+  [4;35;1mRestaurant Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+
+ActionView::TemplateError (undefined method `restaurants_path' for #<ActionView::Base:0xb744be90>) on line #3 of app/views/restaurant/new.html.erb:
+1: <h1>New Restaurant</h1>
+2: 
+3: <% form_for(@restaurant) do |f| %>
+4:   <%= f.error_messages %>
+5: 
+6:   <p>
+
+    app/views/restaurant/new.html.erb:3
+    app/controllers/restaurant_controller.rb:18:in `new'
+
+Rendered rescues/_trace (78.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#new (for 127.0.0.1 at 2009-07-04 10:37:10) [GET]
+  [4;36;1mRestaurant Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurant
+Rendering restaurant/new
+Completed in 96ms (View: 4, DB: 3) | 200 OK [http://localhost/restaurant/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2009-07-04 10:37:28) [POST]
+  Parameters: {"restaurant"=>{"address"=>"rt", "name"=>"er"}, "commit"=>"Create", "authenticity_token"=>"ac/8RkByaUgT1CHIzXup5cBKrq9etJsRTIgN5eIxLYs="}
+
+NameError (uninitialized constant RestaurantsController):
+  
+
+Rendered rescues/_trace (83.9ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-04 10:37:41) [GET]
+
+NameError (uninitialized constant RestaurantsController):
+  
+
+Rendered rescues/_trace (53.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-04 10:37:50) [GET]
+  [4;35;1mRestaurant Load (1.0ms)[0m   [0mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;36;1mRestaurant Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Completed in 132ms (View: 36, DB: 3) | 200 OK [http://localhost/restaurant]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-07-04 10:37:53) [GET]
+
+NameError (uninitialized constant RestaurantsController):
+  
+
+Rendered rescues/_trace (83.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-07-04 10:38:00) [GET]
+
+NameError (uninitialized constant RestaurantsController):
+  
+
+Rendered rescues/_trace (69.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-04 10:38:05) [GET]
+
+ActionController::RoutingError (No route matches "/restaurant%5C" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-04 10:38:08) [GET]
+
+NameError (uninitialized constant RestaurantsController):
+  
+
+Rendered rescues/_trace (151.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantController#index (for 127.0.0.1 at 2009-07-04 10:38:24) [GET]
+  [4;35;1mRestaurant Load (1.0ms)[0m   [0mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurant
+Rendering restaurant/index
+  [4;36;1mRestaurant Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Completed in 114ms (View: 45, DB: 4) | 200 OK [http://localhost/restaurant]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-04 10:39:16) [GET]
+
+NameError (uninitialized constant RestaurantsController):
+  
+
+Rendered rescues/_trace (79.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-04 10:39:40) [GET]
+
+NameError (uninitialized constant RestaurantsController):
+  
+
+Rendered rescues/_trace (53.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#index (for 127.0.0.1 at 2009-07-04 10:41:48) [GET]
+  [4;35;1mRestaurant Load (1.0ms)[0m   [0mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/index
+  [4;36;1mRestaurant Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Completed in 141ms (View: 51, DB: 3) | 200 OK [http://localhost/restaurants]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#new (for 127.0.0.1 at 2009-07-04 10:41:49) [GET]
+  [4;35;1mRestaurant Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+
+ActionView::MissingTemplate (Missing template restaurants/new.erb in view path app/views):
+  app/controllers/restaurants_controller.rb:13:in `new'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#new (for 127.0.0.1 at 2009-07-04 10:44:51) [GET]
+  [4;36;1mRestaurant Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+
+ActionView::MissingTemplate (Missing template restaurants/new.erb in view path app/views):
+  app/controllers/restaurants_controller.rb:13:in `new'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#new (for 127.0.0.1 at 2009-07-04 10:44:52) [GET]
+  [4;35;1mRestaurant Columns (2.7ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+
+ActionView::MissingTemplate (Missing template restaurants/new.erb in view path app/views):
+  app/controllers/restaurants_controller.rb:13:in `new'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#new (for 127.0.0.1 at 2009-07-04 10:44:53) [GET]
+  [4;36;1mRestaurant Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+
+ActionView::MissingTemplate (Missing template restaurants/new.erb in view path app/views):
+  app/controllers/restaurants_controller.rb:13:in `new'
+
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#new (for 127.0.0.1 at 2009-07-04 10:44:55) [GET]
+  [4;35;1mRestaurant Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+
+ActionView::MissingTemplate (Missing template restaurants/new.erb in view path app/views):
+  app/controllers/restaurants_controller.rb:13:in `new'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#new (for 127.0.0.1 at 2009-07-04 10:48:01) [GET]
+  [4;36;1mRestaurant Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurants
+Rendering restaurants/new
+Completed in 72ms (View: 12, DB: 3) | 200 OK [http://localhost/restaurants/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#create (for 127.0.0.1 at 2009-07-04 10:48:07) [POST]
+  Parameters: {"restaurant"=>{"address"=>"aaaaaaaaaaa", "name"=>"stella"}, "commit"=>"Create", "authenticity_token"=>"ac/8RkByaUgT1CHIzXup5cBKrq9etJsRTIgN5eIxLYs="}
+  [4;35;1mRestaurant Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRestaurant Create (0.7ms)[0m   [0mINSERT INTO `restaurants` (`name`, `address`, `created_at`, `updated_at`) VALUES('stella', 'aaaaaaaaaaa', '2009-07-04 15:48:07', '2009-07-04 15:48:07')[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants/2
+Completed in 123ms (DB: 10) | 302 Found [http://localhost/restaurants]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#show (for 127.0.0.1 at 2009-07-04 10:48:07) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mRestaurant Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+  [4;36;1mRestaurant Load (1.3ms)[0m   [0;1mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 2) [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/show
+Completed in 102ms (View: 7, DB: 4) | 200 OK [http://localhost/restaurants/2]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#index (for 127.0.0.1 at 2009-07-04 10:48:09) [GET]
+  [4;35;1mRestaurant Load (1.4ms)[0m   [0mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/index
+  [4;36;1mRestaurant Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Completed in 93ms (View: 36, DB: 4) | 200 OK [http://localhost/restaurants]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#destroy (for 127.0.0.1 at 2009-07-04 10:48:17) [DELETE]
+  Parameters: {"authenticity_token"=>"ac/8RkByaUgT1CHIzXup5cBKrq9etJsRTIgN5eIxLYs=", "id"=>"2"}
+  [4;35;1mRestaurant Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+  [4;36;1mRestaurant Load (0.7ms)[0m   [0;1mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mRestaurant Destroy (0.5ms)[0m   [0;1mDELETE FROM `restaurants` WHERE `id` = 2[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants
+Completed in 99ms (DB: 8) | 302 Found [http://localhost/restaurants/2]
+  [4;36;1mSQL (2.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#index (for 127.0.0.1 at 2009-07-04 10:48:17) [GET]
+  [4;36;1mRestaurant Load (0.8ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/index
+  [4;35;1mRestaurant Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 83ms (View: 37, DB: 5) | 200 OK [http://localhost/restaurants]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#index (for 127.0.0.1 at 2009-07-04 10:49:18) [GET]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mRestaurant Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+
+IOError (closed stream):
+  /usr/lib/ruby/1.8/mysql.rb:1032:in `sync='
+  /usr/lib/ruby/1.8/mysql.rb:1032:in `write'
+  /usr/lib/ruby/1.8/mysql.rb:1092:in `finalizer'
+  /usr/lib/ruby/1.8/mysql.rb:578:in `call'
+  /usr/lib/ruby/1.8/mysql.rb:578:in `start'
+  /usr/lib/ruby/1.8/mysql.rb:578:in `free'
+  app/controllers/restaurants_controller.rb:3:in `index'
+
+Rendered rescues/_trace (69.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#index (for 127.0.0.1 at 2009-07-04 10:49:26) [GET]
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mRestaurant Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+
+IOError (closed stream):
+  /usr/lib/ruby/1.8/mysql.rb:1032:in `sync='
+  /usr/lib/ruby/1.8/mysql.rb:1032:in `write'
+  /usr/lib/ruby/1.8/mysql.rb:1092:in `finalizer'
+  /usr/lib/ruby/1.8/mysql.rb:578:in `call'
+  /usr/lib/ruby/1.8/mysql.rb:578:in `start'
+  /usr/lib/ruby/1.8/mysql.rb:578:in `free'
+  app/controllers/restaurants_controller.rb:3:in `index'
+
+Rendered rescues/_trace (79.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#index (for 127.0.0.1 at 2009-07-04 10:51:42) [GET]
+  [4;36;1mRestaurant Load (1.0ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/index
+  [4;35;1mRestaurant Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 118ms (View: 34, DB: 3) | 200 OK [http://localhost/restaurants]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#new (for 127.0.0.1 at 2009-07-04 10:51:44) [GET]
+  [4;36;1mRestaurant Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurants
+Rendering restaurants/new
+Completed in 71ms (View: 7, DB: 3) | 200 OK [http://localhost/restaurants/new]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#create (for 127.0.0.1 at 2009-07-04 10:52:13) [POST]
+  Parameters: {"restaurant"=>{"address"=>"mmmm", "name"=>"stellla"}, "commit"=>"Create", "authenticity_token"=>"ac/8RkByaUgT1CHIzXup5cBKrq9etJsRTIgN5eIxLYs="}
+  [4;35;1mRestaurant Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRestaurant Create (0.4ms)[0m   [0mINSERT INTO `restaurants` (`name`, `address`, `created_at`, `updated_at`) VALUES('stellla', 'mmmm', '2009-07-04 15:52:13', '2009-07-04 15:52:13')[0m
+  [4;36;1mSQL (6.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants/3
+Completed in 72ms (DB: 10) | 302 Found [http://localhost/restaurants]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#show (for 127.0.0.1 at 2009-07-04 10:52:13) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mRestaurant Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+  [4;36;1mRestaurant Load (0.8ms)[0m   [0;1mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 3) [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/show
+Completed in 77ms (View: 3, DB: 3) | 200 OK [http://localhost/restaurants/3]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#index (for 127.0.0.1 at 2009-07-04 10:52:17) [GET]
+  [4;35;1mRestaurant Load (1.3ms)[0m   [0mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/index
+  [4;36;1mRestaurant Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Completed in 101ms (View: 37, DB: 4) | 200 OK [http://localhost/restaurants]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#new (for 127.0.0.1 at 2009-07-04 10:52:18) [GET]
+  [4;35;1mRestaurant Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurants
+Rendering restaurants/new
+Completed in 62ms (View: 5, DB: 3) | 200 OK [http://localhost/restaurants/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#create (for 127.0.0.1 at 2009-07-04 10:52:21) [POST]
+  Parameters: {"restaurant"=>{"address"=>"ss", "name"=>""}, "commit"=>"Create", "authenticity_token"=>"ac/8RkByaUgT1CHIzXup5cBKrq9etJsRTIgN5eIxLYs="}
+  [4;36;1mRestaurant Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/restaurants
+Rendering restaurants/new
+Completed in 78ms (View: 4, DB: 4) | 200 OK [http://localhost/restaurants]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#create (for 127.0.0.1 at 2009-07-04 10:53:56) [POST]
+  Parameters: {"restaurant"=>{"address"=>"ss", "name"=>"ffff"}, "commit"=>"Create", "authenticity_token"=>"ac/8RkByaUgT1CHIzXup5cBKrq9etJsRTIgN5eIxLYs="}
+  [4;35;1mRestaurant Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRestaurant Create (0.4ms)[0m   [0mINSERT INTO `restaurants` (`name`, `address`, `created_at`, `updated_at`) VALUES('ffff', 'ss', '2009-07-04 15:53:56', '2009-07-04 15:53:56')[0m
+  [4;36;1mSQL (5.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants/4
+Completed in 78ms (DB: 9) | 302 Found [http://localhost/restaurants]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#show (for 127.0.0.1 at 2009-07-04 10:53:56) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mRestaurant Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+  [4;36;1mRestaurant Load (0.8ms)[0m   [0;1mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 4) [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/show
+Completed in 78ms (View: 3, DB: 4) | 200 OK [http://localhost/restaurants/4]
+  [4;35;1mSQL (0.4ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#edit (for 127.0.0.1 at 2009-07-04 10:53:59) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mRestaurant Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+  [4;36;1mRestaurant Load (1.0ms)[0m   [0;1mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 4) [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/edit
+Completed in 113ms (View: 10, DB: 4) | 200 OK [http://localhost/restaurants/4/edit]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#update (for 127.0.0.1 at 2009-07-04 10:54:02) [PUT]
+  Parameters: {"restaurant"=>{"address"=>"ss", "name"=>"ffffaaaa"}, "commit"=>"Update", "authenticity_token"=>"ac/8RkByaUgT1CHIzXup5cBKrq9etJsRTIgN5eIxLYs=", "id"=>"4"}
+  [4;35;1mRestaurant Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+  [4;36;1mRestaurant Load (0.6ms)[0m   [0;1mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 4) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mRestaurant Update (0.5ms)[0m   [0;1mUPDATE `restaurants` SET `updated_at` = '2009-07-04 15:54:02', `name` = 'ffffaaaa' WHERE `id` = 4[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants/4
+Completed in 99ms (DB: 7) | 302 Found [http://localhost/restaurants/4]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#show (for 127.0.0.1 at 2009-07-04 10:54:03) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mRestaurant Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.8ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 4) [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/show
+Completed in 78ms (View: 3, DB: 3) | 200 OK [http://localhost/restaurants/4]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#index (for 127.0.0.1 at 2009-07-04 10:54:04) [GET]
+  [4;36;1mRestaurant Load (1.4ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/index
+  [4;35;1mRestaurant Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 89ms (View: 37, DB: 4) | 200 OK [http://localhost/restaurants]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#show (for 127.0.0.1 at 2009-07-04 10:54:07) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mRestaurant Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (1.0ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 4) [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/show
+Completed in 110ms (View: 4, DB: 4) | 200 OK [http://localhost/restaurants/4]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#index (for 127.0.0.1 at 2009-07-04 10:54:10) [GET]
+  [4;36;1mRestaurant Load (1.1ms)[0m   [0;1mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/index
+  [4;35;1mRestaurant Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Completed in 102ms (View: 39, DB: 4) | 200 OK [http://localhost/restaurants]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#destroy (for 127.0.0.1 at 2009-07-04 10:54:13) [DELETE]
+  Parameters: {"authenticity_token"=>"ac/8RkByaUgT1CHIzXup5cBKrq9etJsRTIgN5eIxLYs=", "id"=>"3"}
+  [4;36;1mRestaurant Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (1.3ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 3) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mRestaurant Destroy (0.4ms)[0m   [0mDELETE FROM `restaurants` WHERE `id` = 3[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants
+Completed in 118ms (DB: 11) | 302 Found [http://localhost/restaurants/3]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#index (for 127.0.0.1 at 2009-07-04 10:54:13) [GET]
+  [4;35;1mRestaurant Load (1.0ms)[0m   [0mSELECT * FROM `restaurants` [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/index
+  [4;36;1mRestaurant Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+Completed in 86ms (View: 36, DB: 3) | 200 OK [http://localhost/restaurants]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#new (for 127.0.0.1 at 2009-07-04 10:54:24) [GET]
+  [4;35;1mRestaurant Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `restaurants`[0m
+Rendering template within layouts/restaurants
+Rendering restaurants/new
+Completed in 64ms (View: 5, DB: 3) | 200 OK [http://localhost/restaurants/new]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#create (for 127.0.0.1 at 2009-07-04 10:54:29) [POST]
+  Parameters: {"restaurant"=>{"address"=>"vvvvvvvvvvvvv", "name"=>"vvv"}, "commit"=>"Create", "authenticity_token"=>"ac/8RkByaUgT1CHIzXup5cBKrq9etJsRTIgN5eIxLYs="}
+  [4;36;1mRestaurant Columns (2.7ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mRestaurant Create (0.4ms)[0m   [0;1mINSERT INTO `restaurants` (`name`, `address`, `created_at`, `updated_at`) VALUES('vvv', 'vvvvvvvvvvvvv', '2009-07-04 15:54:29', '2009-07-04 15:54:29')[0m
+  [4;35;1mSQL (6.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/restaurants/5
+Completed in 72ms (DB: 10) | 302 Found [http://localhost/restaurants]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing RestaurantsController#show (for 127.0.0.1 at 2009-07-04 10:54:29) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mRestaurant Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `restaurants`[0m
+  [4;35;1mRestaurant Load (0.8ms)[0m   [0mSELECT * FROM `restaurants` WHERE (`restaurants`.`id` = 5) [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/show
+Completed in 77ms (View: 3, DB: 3) | 200 OK [http://localhost/restaurants/5]

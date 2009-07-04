@@ -1,0 +1,23 @@
+<div class="depot-form">
+<% form_for(@categories) do |f| %>
+  <%= f.error_messages %>
+  <fieldset>
+  <legend>Enter Category Details</legend>
+  <p>
+    <%= f.label :Categories %>:
+   <%= select_tag "payment", options_for_select(%w{ VISA Mastercard Switch }) %>
+  
+  </p>
+    <p>
+    <%= f.label :name %>:
+    <%= f.text_field :name, :size => 40 %>
+  </p>
+   <%= collection_select(:category, :id,Category.all, :id, :name) %>
+
+  <p>
+    <%= f.submit "Add Categories" , :class => "submit" %>
+ </p>
+  </fieldset>
+<% end %>
+
+

@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @restaurants .name %>
+</p>
+
+<p>
+  <b>Hashed password:</b>
+  <%=h @restaurants.address %>
+</p>
+
+<p>
+<%= link_to 'Edit', edit_restaurant_path(@restaurants) %> |
+<%= link_to 'Back', restaurants_path %>

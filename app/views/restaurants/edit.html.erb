@@ -1,0 +1,21 @@
+<h1>Editing restaurants</h1>
+
+<% form_for(@restaurants) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :Address %><br />
+    <%= f.text_field :address %>
+  </p>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @restaurants %> |
+<%= link_to 'Back', restaurant_path %>

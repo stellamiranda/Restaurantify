@@ -1,0 +1,22 @@
+<div class="depot-form">
+<% form_for(@menus) do |f| %>
+  <%= f.error_messages %>
+  <fieldset>
+  <legend>Enter Menu Details</legend>
+  <p>
+  </p>
+    <p>
+    <%= f.label :Menu %>:
+    <%= f.text_field :name, :size => 40 %>
+  </p>
+     <%= f.label :Category %>:
+   <%= collection_select(:category, :id,Category.all, :id, :name) %>
+
+  <p>
+  
+    <%= f.submit "Add Menu" , :class => "submit" %>
+ </p>
+  </fieldset>
+<% end %>
+
+

@@ -1,0 +1,30 @@
+<div id="restaurant-list">
+  <h1>Restaurants</h1>
+
+  <table>
+  <% for restaurant in @restaurants %>
+    <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+
+
+      <td class="list-description">
+        <dl>
+          <dt><%=h restaurant.name %></dt>
+          <dd><%=h restaurant.address %></dd>
+        </dl>
+      </td>
+
+      <td class="list-actions">
+        <%= link_to 'Show', restaurant %><br/>
+        <%= link_to 'Edit', edit_restaurant_path(restaurant) %><br/>
+        <%= link_to 'Destroy', restaurant,
+                    :confirm => 'Are you sure?',
+                    :method => :delete %>
+      </td>
+    </tr>
+  <% end %>
+  </table>
+</div>
+
+<br />
+
+<%= link_to 'New restaurant', new_restaurant_path %>

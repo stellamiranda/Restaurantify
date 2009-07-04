@@ -1,0 +1,32 @@
+<div id="restaurant-list">
+  <h1>Restaurant - Categories</h1>
+
+  <table>
+  <% for category in @categories %>
+    <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+
+
+      <td class="list-description">
+        <dl>
+          <dt><%=h category.name %></dt>
+     </dl>
+      </td>
+
+      <td class="list-actions">
+        <%= link_to 'Show',category %><br/>
+        <%= link_to 'Edit', edit_category_path(category) %><br/>
+        <%= link_to 'Destroy', category,
+                    :confirm => 'Are you sure?',
+                    :method => :delete %>
+      </td>
+    </tr>
+  <% end %>
+  </table>
+</div>
+
+<br />
+ <% form_tag(:action => :sort) do -%>
+   <%= collection_select(:category, :id, @categories, :id, :name) %>
+   <%= submit_tag %>
+   <% end -%>
+<%= link_to 'New Category', new_category_path %>
