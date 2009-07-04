@@ -1,8 +1,18 @@
 <p>
   <b>Name:</b>
-  <%=h @categories.name %>
+  <%=h @diches.name %>
 </p>
 
 <p>
-<%= link_to 'Edit', edit_category_path(@categories) %> |
-<%= link_to 'Back', categories_path %>
+  <b>Description:</b>
+  <%=h @diches.description %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%=h @diches.price %>
+</p>
+
+<p>
+<%= link_to 'Edit', edit_dishes_path(@dishes) %> |
+<%= link_to 'Back', dishes_path %>

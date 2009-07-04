@@ -9,7 +9,7 @@
     <%= f.label :Menu %>:
     <%= f.text_field :name, :size => 40 %>
   </p>
-     <%= f.label :Category %>:
+    <%= f.label :Category %>:
    <%= collection_select(:category, :id,Category.all, :id, :name) %>
 
   <p>
@@ -19,4 +19,4 @@
   </fieldset>
 <% end %>
 
-
+</div>

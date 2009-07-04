@@ -1,22 +1,25 @@
-<div id="restaurant-list">
-  <h1>Restaurant - Categories</h1>
+<div id="Dishes-list">
+  <h1>Restaurant - Dishes</h1>
 
-<% if @menu!=nil%>
+<% if @diches!=nil%>
   <table>
-  <% for menu in @menus %>
+  <% for dish in @diches %>
     <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
 
 
       <td class="list-description">
         <dl>
-          <dt><%=h menu.name %></dt>
-     </dl>
+          <dt><%=h dish.name %></dt>
+       </dl>
+       <dl>
+          <dt><%=h dish.name %></dt>
+       </dl>
       </td>
 
       <td class="list-actions">
-        <%= link_to 'Show',menu %><br/>
-        <%= link_to 'Edit', edit_menu_path(menu) %><br/>
-        <%= link_to 'Destroy', menu,
+        <%= link_to 'Show',dish %><br/>
+        <%= link_to 'Edit', edit_dish_path(dish) %><br/>
+        <%= link_to 'Destroy', dish,
                     :confirm => 'Are you sure?',
                     :method => :delete %>
       </td>
@@ -30,4 +33,4 @@
 </div>
 <br/>
 
-<%= link_to 'New Category', new_menu_path %>
+<%= link_to 'New Dish', new_dish_path %>
