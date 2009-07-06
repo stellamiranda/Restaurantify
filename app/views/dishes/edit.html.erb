@@ -18,10 +18,10 @@
     <%= f.text_field :price %>
   </p>
 
-    </p>
+   <p>
      <%= f.label :menu %>:
-   <%= collection_select(:dish, :category_id,Category.all, :id, :name) %>
-  <p>
+   <%= collection_select(:dish, :category_id,Category.all, :category_id, :name) %>
+  </p>
 
   <p>
     <%= f.submit 'Update' %>

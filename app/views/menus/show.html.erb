@@ -1,18 +1,11 @@
 <p>
   <b>Name:</b>
-  <%=h @diches.name %>
+  <%=h @menus.name %>
 </p>
 
 <p>
-  <b>Description:</b>
-  <%=h @diches.description %>
-</p>
+
 
 <p>
-  <b>Price:</b>
-  <%=h @diches.price %>
-</p>
-
-<p>
-<%= link_to 'Edit', edit_dishes_path(@dishes) %> |
-<%= link_to 'Back', dishes_path %>
+<%= link_to 'Edit', edit_menu_path(@menus) %> |
+<%= link_to 'Back', menus_path %>

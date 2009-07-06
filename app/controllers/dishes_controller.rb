@@ -34,7 +34,7 @@ def index
 
     respond_to do |format|
       if @dishes.save
-        flash[:notice] = 'Product was successfully created.'
+        flash[:notice] = 'Dish was successfully created.'
         format.html { redirect_to(@dishes) }
         format.xml  { render :xml => @dishes, :status => :created, :location => @dishes }
       else

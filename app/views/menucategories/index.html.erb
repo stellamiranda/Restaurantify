@@ -1,0 +1,25 @@
+<div id="Categories">
+
+  <h1>Categories - <%=h  @menu.name %></h1>
+
+<% if @menucategories!=nil%>
+  <table>
+  <% for menucategory in @menucategories %>
+<% if(menucategory.menu.id == @menu.id )%>
+ <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+
+      <td class="list-description">
+          <dt> <%=h menucategory.category.name%></dt>
+      </td>
+
+    </tr>
+      <% end %>
+  <% end %>
+  </table>
+<% else %>
+<%  flash[:notice] = 'No hay Menu.' %>
+<% end%>
+
+</div>
+<br/>
+

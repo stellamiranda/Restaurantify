@@ -8,15 +8,14 @@
     <p>
     <%= f.label :Menu %>:
     <%= f.text_field :name, :size => 40 %>
-  </p>
-    <%= f.label :Category %>:
-   <%= collection_select(:category, :id,Category.all, :id, :name) %>
-
-  <p>
+ 
   
     <%= f.submit "Add Menu" , :class => "submit" %>
  </p>
   </fieldset>
+  <p>
+  <%= link_to 'Back', menus_path %>
+ </p>
 <% end %>
 
 </div>

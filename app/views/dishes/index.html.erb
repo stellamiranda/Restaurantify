@@ -7,10 +7,14 @@
     <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
 
       <td class="list-description">
+           <td>
+           <%= image_tag  dish.image, :class => 'list-image' %>
+          </td>
          <dt>Name: <%=h dish.name %></dt>
          <dt>Description: <%=h dish.description %></dt>
          <dt>Price: <%=h dish.price %></dt>
          <dt>Category: <%=h dish.category.name %></dt>
+       
     <br/>
       </td>
 
