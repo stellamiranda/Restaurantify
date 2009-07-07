@@ -36,9 +36,9 @@ class MenusController < ApplicationController
 
 
     def create
-    # @menus = Menu.new(params[:menu])
+  
      @restaurant = Restaurant.find(params[:restaurant_id])
-      @menus = @restaurant.menus.create("name"=>"bbb")
+      @menus = @restaurant.menus.create(params[:menu])
       respond_to do |format|
       if  @menus.save
         flash[:notice] = 'Menu was successfully created.'
