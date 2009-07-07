@@ -7,7 +7,7 @@
 <% if @menucategories!=nil%>
   <table>
   <% for menucategory in @menucategories %>
-<% if(menucategory.menu.id == @menu.id )%>
+<% if(menucategory.menu_id == @menu.id )%>
  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
 
    <td class="list-description">
