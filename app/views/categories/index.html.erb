@@ -1,5 +1,7 @@
 <div id="restaurant-list">
-  <h1>Restaurant - Categories</h1>
+  <img src="/images/restaurantify.png">
+   <h3>Editing menu</h3>
+  <h1></h1>
 
   <table>
   <% for category in @categories %>
@@ -14,12 +16,19 @@
 
       <td class="list-actions">
         <%= link_to 'Show',category %><br/>
-        <%= link_to 'Edit', edit_category_path(category) %><br/>
+        <%= link_to 'Edit',edit_category_path(@categories) %><br/>
+        <%= link_to 'Edit',new_category_dish_path(@categories) %><br/>
         <%= link_to 'Destroy', category,
                     :confirm => 'Are you sure?',
                     :method => :delete %>
       </td>
+
+
     </tr>
+
+
+    
+
   <% end %>
   </table>
 </div>

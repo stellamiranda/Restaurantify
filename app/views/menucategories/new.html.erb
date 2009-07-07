@@ -1,22 +1,17 @@
-<div class="new_cat_menu">
+<div class="restaurant-form">
+  <img src="/images/restaurantify.png">
+<h1></h1>
 <% form_for([@menu, @menucategories]) do |f| %>
   <%= f.error_messages %>
   <fieldset>
   <legend>Add category to menu </legend>
-  <p>
-  </p>
-
-   <p>
-   <%= f.label :Category %>:
-
-   <%= collection_select(:menucategory, :category_id,Category.all, :id, :name) %>
-
-  </p>
-
-<%= link_to 'New Menu', new_category_path %>
+    <p>
+    <%= f.label :Category %>:
+    <%= collection_select(:menucategory, :category_id,Category.all, :id, :name) %>
+   
     <%= f.submit "Add Category" , :class => "submit" %>
  </p>
-  </fieldset>
+  <%= link_to 'New Category', new_category_path %>
   <p>
   <%= link_to 'Back', menus_path %>
  </p>

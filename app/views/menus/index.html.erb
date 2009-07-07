@@ -1,6 +1,7 @@
-<div id="Menu-list">
-  <h1>Restaurant - Menus</h1>
-
+<div id="restaurant-list">
+<img src="/images/restaurantify.png">
+<h3>Restaurant - Menus</h3>
+  <h1></h1>
 <% if @menus!=nil%>
   <table>
   <% for menu in @menus %>
@@ -31,4 +32,3 @@
 </div>
 <br/>
 
-<%= link_to 'New Menu', new_menu_path %>

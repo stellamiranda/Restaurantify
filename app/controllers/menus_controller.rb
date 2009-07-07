@@ -11,6 +11,7 @@ class MenusController < ApplicationController
 
 
   def new
+  
      @menus = Menu.new
   respond_to do |format|
       format.html # new.html.erb
@@ -32,19 +33,20 @@ class MenusController < ApplicationController
 
 
     def create
-     @menus = Menu.new(params[:menu])
-
-    respond_to do |format|
+    # @menus = Menu.new(params[:menu])
+     @restaurant = Restaurant.find(params[:restaurant_id])
+      @menus = @restaurant.menus.create("name"=>"bbb")
+      respond_to do |format|
       if  @menus.save
         flash[:notice] = 'Menu was successfully created.'
         format.html { redirect_to(@menus) }
         format.xml  { render :xml => @menus, :status => :created, :location => @menus }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml =>@menus.errors, :status => :unprocessable_entity }
+       format.xml  { render :xml =>@menus.errors, :status => :unprocessable_entity }
       end
     end
-  end
+ end
 
   def update
     @menus =  Menu.find(params[:id])

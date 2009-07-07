@@ -11,6 +11,7 @@ class CategoriesController < ApplicationController
 
    def show
     @categories = Category.find(params[:id])
+    @dishes = Dish.all
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @categories}

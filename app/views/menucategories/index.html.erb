@@ -1,6 +1,8 @@
-<div id="Categories">
 
-  <h1>Categories - <%=h  @menu.name %></h1>
+<div id="restaurant-list">
+<img src="/images/restaurantify.png">
+<h1></h1>
+  <h3>Category - <%=h  @menu.name %></h3>
 
 <% if @menucategories!=nil%>
   <table>
@@ -8,8 +10,18 @@
 <% if(menucategory.menu.id == @menu.id )%>
  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
 
-      <td class="list-description">
+   <td class="list-description">
+        <dl>
           <dt> <%=h menucategory.category.name%></dt>
+        </dl>
+      </td>
+
+      <td class="list-actions">
+        <%= link_to 'Show' , menucategory.category%><br/>
+        <%= link_to 'Edit', edit_category_path(menucategory.category) %><br/>
+        <%= link_to 'Destroy', menucategory.category,
+                    :confirm => 'Are you sure?',
+                    :method => :delete %>
       </td>
 
     </tr>
@@ -19,7 +31,8 @@
 <% else %>
 <%  flash[:notice] = 'No hay Menu.' %>
 <% end%>
-
-</div>
 <br/>
+<%= link_to 'Back', restaurants_path %>
+</div>
+
 

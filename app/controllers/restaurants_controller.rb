@@ -1,5 +1,7 @@
 class RestaurantsController < ApplicationController
-def index
+
+before_filter :authenticate
+  def index
    @restaurants = Restaurant.find(:all)
 
  respond_to do |format|
@@ -22,6 +24,8 @@ def index
 
     def show
     @restaurants = Restaurant.find(params[:id])
+    @menus = Menu.all
+  
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @restaurants}

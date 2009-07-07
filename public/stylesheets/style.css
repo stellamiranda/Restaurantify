@@ -1,0 +1,188 @@
+h1 {
+        font:  150% sans-serif;
+        color: #226;
+
+ border-bottom:  2px solid #000000;
+}
+
+/* Styles for products/index */
+
+#restaurant-list table {
+        border-collapse: collapse;
+}
+
+#restaurant-list table tr td {
+        padding: 5px;
+        vertical-align: top;
+}
+
+#restaurant-list .list-image {
+  width:        60px;
+  height:       70px;
+}
+
+#restaurant-list .list-description {
+  width:        60%;
+}
+
+#restaurant-list .list-description dl {
+        margin: 0;
+}
+
+#restaurant-list .list-description dt {
+	color:        #244;
+	font-weight:  bold;
+	font-size:    larger;
+}
+
+#restaurant-list .list-description dd {
+        margin: 0;
+}
+
+#restaurant-list .list-actions {
+  font-size:    x-small;
+  text-align:   right;
+  padding-left: 1em;
+}
+
+#restaurant-list .list-line-even {
+  background:   #DFEEF8;
+}
+
+#restaurant-list .list-line-odd {
+  background:   #F7DFFF;
+}
+
+#restaurant-list a {
+  color:  #7E5C97;
+}
+
+#restaurant-show b {
+  color:  #6A14E7;
+}
+#restaurant-show a {
+  color:  #7E5C97;
+}
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: #EEFFEE;
+  display: inline;
+}
+
+.fieldWithErrors * {
+  background-color: red;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+#banner {
+  background: #9c9 ;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid;
+  font: small-caps 40px/40px "Times New Roman", serif;
+  color: #282 ;
+  text-align: center;
+}
+#banner img {
+  float: left;
+}
+#columns {
+  background: #141 ;
+}
+#main {
+  margin-left: 13em;
+  padding-top: 4ex;
+  padding-left: 2em;
+  background: white;
+}
+#side {
+  float: left;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  width: 12em;
+  background: #141 ;
+}
+#side a {
+  color: #bfb ;
+  font-size: small;
+}
+
+#store .entry form, #store .entry form div {
+  display: inline;
+}
+#notice {
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0 ;
+  font: bold smaller sans-serif;
+}
+#cart, #cart table {
+  font-size: smaller;
+  color:       white;
+}
+#cart table {
+                   
+  border-top: 1px dotted #595 ;
+  border-bottom: 1px dotted #595 ;
+  margin-bottom: 10px;
+}
+.restaurant-form fieldset {
+  background: #E8CDF3;
+}
+.restaurant-form legend {
+  color: #dfd ;
+  background: #8926B7;
+  font-family: sans-serif;
+  padding: 0.2em 1em;
+}
+.restaurant-form label {
+  width: 5em;
+  float: left;
+  text-align: right;
+  padding-top: 0.2em;
+  margin-right: 0.1em;
+  display: block;
+}
+.restaurant-form select, .depot-form textarea, .depot-form input {
+  margin-left: 0.5em;
+}
+.restaurant-form .submit {
+  margin-left: 4em;
+}
+.restaurant-form div {
+  margin: 0.5em 0;
+}
+
+

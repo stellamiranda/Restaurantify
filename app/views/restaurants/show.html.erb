@@ -1,13 +1,47 @@
-<p>
-  <b>Name:</b>
-  <%=h @restaurants .name %>
-</p>
+<div id="restaurant-list">
+<img src="/images/restaurantify.png">
+<h1></h1>
+  <table>
+<td class="list-description">
+        <dl>
+          <dt><%=h  @restaurants.name %></dt>
+          <dd>  <%=h @restaurants.address %></dd>
+        </dl>
+</td>
+</table>
+<% if @menus!=nil%>
+  <table>
+  <% for menu in @menus %>
+    <% if menu.restaurant_id == @restaurants.id%>
+    <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
 
-<p>
-  <b>Hashed password:</b>
-  <%=h @restaurants.address %>
-</p>
 
-<p>
+      <td class="list-description">
+        <dl>
+          <dt><%=h menu.name %></dt>
+          </dl>
+      </td>
+
+      <td class="list-actions">
+        <%= link_to 'Show', menu_menucategories_path(menu)  %><br/>
+        <%= link_to 'Add Category',new_menu_menucategory_path(menu)  %><br/>
+         <%= link_to 'Edit', edit_menu_path(menu) %><br/>
+        <%= link_to 'Destroy', menu,
+                    :confirm => 'Are you sure?',
+                    :method => :delete %>
+      </td>
+
+    </tr>
+  <%end%>
+  <% end %>
+  </table>
+  
+<% else %>
+<%  flash[:notice] = 'No hay Menu.' %>
+<% end%>
+
+<br />
 <%= link_to 'Edit', edit_restaurant_path(@restaurants) %> |
 <%= link_to 'Back', restaurants_path %>
+
+</div>

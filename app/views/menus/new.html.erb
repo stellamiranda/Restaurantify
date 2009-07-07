@@ -1,5 +1,6 @@
-<div class="depot-form">
-<% form_for(@menus) do |f| %>
+<div class="restaurant-form">
+
+<% form_for [:restaurant,@menus] do |f| %>
   <%= f.error_messages %>
   <fieldset>
   <legend>Enter Menu Details</legend>
