@@ -24,18 +24,24 @@ before_filter :authenticate
 
     def show
     @restaurants = Restaurant.find(params[:id])
-    @menus = Menu.all
-  
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @restaurants}
-    end
+     
+   if Restaurant.find(params[:id]).user_id == current_user.id
+     respond_to do |format|
+         format.html # show.html.erb
+         format.xml  { render :xml => @restaurants}
+       end
+   else
+       flash[:notice] = ' no tienes permisos.'
+       redirect_to  restaurants_path
+       
+   end
+
   end
 
 
     def create
     @restaurants = Restaurant.new(params[:restaurant])
-
+   
     respond_to do |format|
       if @restaurants.save
         flash[:notice] = 'Product was successfully created.'
@@ -51,7 +57,7 @@ before_filter :authenticate
 
     def update
     @restaurants= Restaurant.find(params[:id])
-
+  if Restaurant.find(params[:id]).user_id == current_user.id
     respond_to do |format|
       if @restaurants.update_attributes(params[:restaurant])
         flash[:notice] = 'Product was successfully updated.'
@@ -62,6 +68,10 @@ before_filter :authenticate
         format.xml  { render :xml => @restaurants.errors, :status => :unprocessable_entity }
       end
     end
+  else
+       flash[:notice] = ' no tienes permisos.'
+       redirect_to  restaurants_path
+  end
   end
 
 

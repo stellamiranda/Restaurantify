@@ -2,6 +2,7 @@ class MenucategoriesController < ApplicationController
   def index
     @menucategories = Menucategory.all
     @menu = Menu.find(params[:menu_id])
+   
     respond_to do |format|
       format.html
       format.xml  { render :xml => @menucategories}

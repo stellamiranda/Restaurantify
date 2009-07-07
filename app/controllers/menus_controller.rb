@@ -1,5 +1,6 @@
 class MenusController < ApplicationController
-
+ 
+  before_filter :authenticate
   def index
    @menus = Menu.all
   
@@ -25,10 +26,12 @@ class MenusController < ApplicationController
 
     def show
      @menus = Menu.find(params[:id])
-  respond_to do |format|
+     #current_user.id
+     
+      respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml =>  @menus}
-    end
+     end
   end
 
 
