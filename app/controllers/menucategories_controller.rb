@@ -1,4 +1,5 @@
 class MenucategoriesController < ApplicationController
+  before_filter :authenticate
   def index
     @menucategories = Menucategory.all
     @menu = Menu.find(params[:menu_id])

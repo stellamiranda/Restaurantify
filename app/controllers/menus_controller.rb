@@ -1,6 +1,6 @@
 class MenusController < ApplicationController
  
-  before_filter :authenticate
+  before_filter :authenticate, :except => [:index]
   def index
    @menus = Menu.all
   

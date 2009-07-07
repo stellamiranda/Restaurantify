@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
 
-before_filter :authenticate
+before_filter :authenticate, :except => [:index,:show]
   def index
    @restaurants = Restaurant.find(:all)
 
@@ -25,17 +25,10 @@ before_filter :authenticate
     def show
     @restaurants = Restaurant.find(params[:id])
      @menus = Menu.all
-   if Restaurant.find(params[:id]).user_id == current_user.id
-     respond_to do |format|
+      respond_to do |format|
          format.html # show.html.erb
          format.xml  { render :xml => @restaurants}
        end
-   else
-       flash[:notice] = ' no tienes permisos.'
-       redirect_to  restaurants_path
-       
-   end
-
   end
 
 

@@ -1,5 +1,6 @@
 class DishesController < ApplicationController
-def index
+before_filter :authenticate, :except => [:index]
+  def index
    @diches = Dish.all
 
  respond_to do |format|

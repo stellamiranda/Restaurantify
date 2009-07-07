@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-
+before_filter :authenticate, :except => [:index]
   def index
    @categories = Category.find(:all)
 
