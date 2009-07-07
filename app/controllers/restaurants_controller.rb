@@ -24,7 +24,7 @@ before_filter :authenticate
 
     def show
     @restaurants = Restaurant.find(params[:id])
-     
+     @menus = Menu.all
    if Restaurant.find(params[:id]).user_id == current_user.id
      respond_to do |format|
          format.html # show.html.erb
