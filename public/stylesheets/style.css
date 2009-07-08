@@ -22,7 +22,13 @@ h1 {
 }
 
 #restaurant-list .list-description {
-  width:        60%;
+  width:        40%;
+}
+
+#restaurant-list .list-name {
+   color:        #266;
+  font-weight:  bold;
+  font-size:    20px;;
 }
 
 #restaurant-list .list-description dl {
@@ -52,6 +58,10 @@ h1 {
 #restaurant-list .list-line-odd {
   background:   #F7DFFF;
 }
+#restaurant-list .list-line-main {
+  background:   #C4EFD2;
+}
+
 
 #restaurant-list a {
   color:  #7E5C97;
@@ -64,6 +74,11 @@ h1 {
   color:  #7E5C97;
 }
 
+
+#sign{
+    text-align: right;
+
+}
 .fieldWithErrors {
   padding: 2px;
   background-color: #EEFFEE;

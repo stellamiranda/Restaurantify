@@ -1,47 +1,39 @@
 <div id="restaurant-list">
 <img src="/images/restaurantify.png">
 <h1></h1>
-  <table>
-<td class="list-description">
-        <dl>
-          <dt><%=h  @restaurants.name %></dt>
-          <dd>  <%=h @restaurants.address %></dd>
+<table>
+  <td class="list-name">
+    <dl>
+      <dt><%=h  @restaurants.name %>'s menus</dt>
         </dl>
-</td>
+  </td>
 </table>
 <% if @menus!=nil%>
   <table>
   <% for menu in @menus %>
     <% if menu.restaurant_id == @restaurants.id%>
-    <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-
-
-      <td class="list-description">
-        <dl>
-          <dt><%=h menu.name %></dt>
+      <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+        <td class="list-description">
+          <dl>
+            <dt><%=h menu.name %></dt>
           </dl>
-      </td>
-
-      <td class="list-actions">
-        <%= link_to 'Show', menu_menucategories_path(menu)  %><br/>
-        <%= link_to 'Add Category',new_menu_menucategory_path(menu)  %><br/>
-         <%= link_to 'Edit', edit_menu_path(menu) %><br/>
-        <%= link_to 'Destroy', menu,
-                    :confirm => 'Are you sure?',
-                    :method => :delete %>
-      </td>
-
-    </tr>
-  <%end%>
+        </td>
+        <td class="list-actions">
+          <%= link_to 'Show', restaurant_menu_path(@restaurants, menu)  %><br/>
+          <%= link_to 'Add Category',new_menu_menucategory_path(menu)  %><br/>
+          <%= link_to 'Edit', edit_menu_path(menu) %><br/>
+          <%= link_to 'Destroy', menu,
+                      :confirm => 'Are you sure?',
+                      :method => :delete %>
+        </td>
+      </tr>
+    <%end%>
   <% end %>
   </table>
-  
 <% else %>
 
 <% end%>
-
 <br />
 <%= link_to 'Edit', edit_restaurant_path(@restaurants) %> |
 <%= link_to 'Back', restaurants_path %>
-
 </div>

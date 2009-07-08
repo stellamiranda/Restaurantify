@@ -1,32 +1,46 @@
 <div id="restaurant-list">
 
-<img src="/images/restaurantify.png">
-    <h1></h1>
+  <img src="/images/restaurantify.png">
+  <h1></h1>
+  <div id="sign">
+    <% if current_user%>
+       bienvenido <%=current_user.email%> <%= link_to 'Logout', sign_out_path %>
+    <% else %>
+     <%= link_to 'Login', sign_in_path %>
+    <% end %>
+  </div>
+
   <table>
-  <% for restaurant in @restaurants %>
-    <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+    <% for restaurant in @restaurants %>
+      <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
 
 
-      <td class="list-description">
-        <dl>
-          <dt><%=h restaurant.name %></dt>
-          <dd><%=h restaurant.address %></dd>
-        </dl>
-      </td>
+        <td class="list-description">
+          <dl>
+            <dt><%= link_to restaurant.name, restaurant %></dt>
+            <dd><%=h restaurant.address %></dd>
+          </dl>
+        </td>
 
-      <td class="list-actions">
-        <%= link_to 'Show', restaurant %><br/>
-        <%= link_to 'Add menu',  new_restaurant_menu_path(restaurant) %><br/>
-        <%= link_to 'Edit', edit_restaurant_path(restaurant) %><br/>
-        <%= link_to 'Destroy', restaurant,
-                    :confirm => 'Are you sure?',
-                    :method => :delete %>
-      </td>
-    </tr>
-  <% end %>
+        <td class="list-actions">
+          
+
+          <% if current_user %>
+            <%= link_to 'Add menu',  new_restaurant_menu_path(restaurant) %><br/>
+            <%= link_to 'Edit', edit_restaurant_path(restaurant)%><br/>
+            <%= link_to 'Destroy', restaurant,
+              :confirm => 'Are you sure?',
+              :method => :delete %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
   </table>
   <br /> <br />
   <%= link_to 'New restaurant', new_restaurant_path %>
+
+
+
 </div>
 
 

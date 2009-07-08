@@ -2,32 +2,45 @@
 <div id="restaurant-list">
 <img src="/images/restaurantify.png">
 <h1></h1>
-  <h3>Category - <%=h  @menu.name %></h3>
+<h3>Menu <%=h  @menu.name %>'s categories</h3>
 
 <% if @menucategories!=nil%>
   <table>
-  <% for menucategory in @menucategories %>
-<% if(menucategory.menu_id == @menu.id )%>
- <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+    <% for menucategory in @menucategories %>
+      <% if(menucategory.menu_id == @menu.id )%>
+        <tr class="<%= cycle('list-line-main') %>">
+          <td class="list-description">
+            <dl>
+              <dt><%=h menucategory.category.name%></dt>
+              <br>
+               <table>
+                <% for dish in @dishes %>
+                  <% if dish.category_id == menucategory.category.id%>
+                    <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+                       <td class="list-description">
+                         <dl>
+                           <dt><%=h dish.name%></dt>
+                         </dl>
+                       </td>
+                    </tr>
+                  <%end%>
+                <%end%>
+                </table>
+             </dl>
+           </td>
+           <td class="list-actions">
+             <% if current_user %>
+               <%= link_to 'Edit', edit_category_path(menucategory.category) %><br/>
+               <%= link_to 'Destroy', menucategory.category,
+                           :confirm => 'Are you sure?',
+                           :method => :delete %>
+             <% end%>
+           </td>
+         </tr>
+       <% end %>
+     <% end %>
+   </table>
 
-   <td class="list-description">
-        <dl>
-          <dt> <%=h menucategory.category.name%></dt>
-        </dl>
-      </td>
-
-      <td class="list-actions">
-        <%= link_to 'Show' , menucategory.category%><br/>
-        <%= link_to 'Edit', edit_category_path(menucategory.category) %><br/>
-        <%= link_to 'Destroy', menucategory.category,
-                    :confirm => 'Are you sure?',
-                    :method => :delete %>
-      </td>
-
-    </tr>
-      <% end %>
-  <% end %>
-  </table>
 <% else %>
 
 <% end%>

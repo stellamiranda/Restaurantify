@@ -1,9 +1,9 @@
 class MenucategoriesController < ApplicationController
-  before_filter :authenticate
+  before_filter :authenticate, :except => [:index, :show]
   def index
     @menucategories = Menucategory.all
     @menu = Menu.find(params[:menu_id])
-   
+    @dishes = Dish.all
     respond_to do |format|
       format.html
       format.xml  { render :xml => @menucategories}

@@ -11,16 +11,19 @@
       <td class="list-description">
         <dl>
           <dt><%=h menu.name %></dt>
+    
      </dl>
       </td>
 
       <td class="list-actions">
-        <%= link_to 'Show', menu_menucategories_path(menu)  %><br/>
+       
+         <% if current_user %>
         <%= link_to 'Add Category',new_menu_menucategory_path(menu)  %><br/>
          <%= link_to 'Edit', edit_menu_path(menu) %><br/>
         <%= link_to 'Destroy', menu,
                     :confirm => 'Are you sure?',
                     :method => :delete %>
+           <% end%>
       </td>
     </tr>
   <% end %>

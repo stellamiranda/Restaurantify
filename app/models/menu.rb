@@ -1,5 +1,5 @@
 class Menu< ActiveRecord::Base
-belongs_to  :restaurants
+belongs_to  :restaurant
 has_many :menucategories
 has_many :categories, :through => :menucategories
 

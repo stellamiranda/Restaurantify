@@ -1,6 +1,24 @@
 class RestaurantsController < ApplicationController
 
 before_filter :authenticate, :except => [:index,:show]
+before_filter :can_only_edit_self, :only =>[:edit, :update, :destroy]
+
+protected
+
+  def can_only_edit_self
+    if params[:user_id] != nil
+      unless current_user == User.find(params[:user_id])
+        flash[:error] = 'On, snap! Get outta here... '
+      end
+    else
+       flash[:error] = 'On, you have to sign in... '
+      redirect_to restaurants_path
+     
+    end
+  end
+
+public
+
   def index
    @restaurants = Restaurant.find(:all)
 
