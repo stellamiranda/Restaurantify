@@ -6,14 +6,18 @@ before_filter :can_only_edit_self, :only =>[:edit, :update, :destroy]
 protected
 
   def can_only_edit_self
-    if params[:user_id] != nil
-      unless current_user == User.find(params[:user_id])
+    @restaurant = Restaurant.find(params[:id])
+    @user = @restaurant.user
+    if @user != nil
+      puts "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP"
+      puts current_user.id
+      puts @user.id
+      if current_user.id != @user.id
         flash[:error] = 'On, snap! Get outta here... '
+        redirect_to restaurants_url
       end
     else
-       flash[:error] = 'On, you have to sign in... '
-      redirect_to restaurants_path
-     
+      flash[:error] = 'No tiene usuario '
     end
   end
 
@@ -21,6 +25,7 @@ public
 
   def index
    @restaurants = Restaurant.find(:all)
+   
 
  respond_to do |format|
        format.html
@@ -38,6 +43,7 @@ public
 
   def edit
    @restaurants = Restaurant.find(params[:id])
+   @user_id = @restaurants.user_id
   end
 
     def show
