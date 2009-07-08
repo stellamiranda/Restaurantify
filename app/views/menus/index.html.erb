@@ -1,8 +1,8 @@
 <div id="restaurant-list">
 <img src="/images/restaurantify.png">
-<h3>Restaurant - Menus</h3>
+  <% if @menus!=nil%>
+<h3> <%=h @restaurant.name%>'s menus</h3>
   <h1></h1>
-<% if @menus!=nil%>
   <table>
   <% for menu in @menus %>
     <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">

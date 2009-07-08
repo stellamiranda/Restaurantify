@@ -27,7 +27,7 @@
       <%= collection_select(:dish, :category_id,Category.all, :id, :name) %>
 
       <p>
-       <%= f.submit "Add Dish" , :class => "submit" %>
+       <%= f.submit "Add Dish" , :class => "submit" ,:redirect_to =>restaurants_url %>
       </p>
     </fieldset>
   <% end %>

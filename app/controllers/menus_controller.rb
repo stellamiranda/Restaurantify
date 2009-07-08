@@ -3,7 +3,7 @@ class MenusController < ApplicationController
   before_filter :authenticate, :except => [:index, :show]
   def index
    @menus = Menu.all
-   
+   @restaurant = Restaurant.find(params[:restaurant_id])
  respond_to do |format|
        format.html
      format.xml  { render :xml =>  @menus}
@@ -28,6 +28,7 @@ class MenusController < ApplicationController
     def show
      @menus = Menu.find(params[:id])
      @menucategories = @menus.menucategories
+   #  @category = @menucategories.category.id
      @restaurant = Restaurant.find(params[:restaurant_id])
      
       respond_to do |format|
@@ -38,13 +39,13 @@ class MenusController < ApplicationController
 
 
     def create
-  
+ 
      @restaurant = Restaurant.find(params[:restaurant_id])
       @menus = @restaurant.menus.create(params[:menu])
       respond_to do |format|
       if  @menus.save
         flash[:notice] = 'Menu was successfully created.'
-        format.html { redirect_to(@menus) }
+        format.html { redirect_to  restaurant_menus_path(@restaurant.id) }
         format.xml  { render :xml => @menus, :status => :created, :location => @menus }
       else
         format.html { render :action => "new" }

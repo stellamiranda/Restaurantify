@@ -11,10 +11,11 @@ before_filter :authenticate, :except => [:index]
 
   def new
     @diches = Dish.new
-  respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @diches }
-    end
+   
+   respond_to do |format|
+   format.html # new.html.erb
+   format.xml  { render :xml => @diches }
+   end
   end
 
    def edit
@@ -31,8 +32,10 @@ before_filter :authenticate, :except => [:index]
 
 
     def create
-    @dishes = Dish.new(params[:dish])
-
+    
+    @category = Category.find_by_id(params[:category_id])
+    @dishes = @category.dish.create(params[:category])
+    render :text => @category
     respond_to do |format|
       if @dishes.save
         flash[:notice] = 'Dish was successfully created.'
@@ -44,7 +47,6 @@ before_filter :authenticate, :except => [:index]
       end
     end
   end
-
 
     def update
     @dishes =  Dish.find(params[:id])
