@@ -26,7 +26,8 @@
       <% if current_user%>
         
             <%= link_to_remote "Add Dish to this category", 
-              :url => new_category_dish_path(:category_id => @category.id),
+              :url => new_dish_path,
+              #:url => new_category_dish_path(:category_id => @category.id),
               :method => :get,
               :update => "new_dish_form"
             %>

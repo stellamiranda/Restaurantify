@@ -57,11 +57,10 @@ class MenusController < ApplicationController
 
   def update
     @menus =  Menu.find(params[:id])
-      @restaurant = Restaurant.find(params[:restaurant_id])
+    @restaurant = Restaurant.find(params[:restaurant_id])
     respond_to do |format|
       if @menus.update_attributes(params[:menu])
         flash[:notice] = 'Menu was successfully updated.'
-        #format.html { redirect_to restaurants_path }
         format.html { redirect_to restaurant_menus_path(@restaurant.id) }
         format.xml  { head :ok }
       else

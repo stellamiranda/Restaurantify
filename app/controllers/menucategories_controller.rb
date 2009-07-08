@@ -36,21 +36,19 @@ class MenucategoriesController < ApplicationController
 
 
   def create
-    @menu = Menu.find(params[:menu_id])
+
+    @menu = Menu.find_by_id(params[:menu_id])
     @menucategory = @menu.menucategories.new(params[:menucategory])
-    
-    respond_to do |format|
-      if @menucategory.save
-        flash[:notice] = 'Category was successfully added.'
-        format.html { redirect_to( @menu) }
-        format.xml  { render :xml => @menucategory, :status => :created, :location => @menucategory }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @menucategory.errors, :status => :unprocessable_entity }
+  #  @restaurant = Restaurant.find_by_id(params[:restaurant_id])
+      respond_to do |format|
+       if @menucategory.save
+        format.html {   redirect_to restaurant_menu_path(@menu.restaurant_id,@menu.id) }
+       #  format.html {   redirect_to menus_path(@menu)}
+         format.xml  { render :xml => @menucategory, :status => :created, :location => @menucategory }
+        else
+         format.html { render :action => "new" }
+         format.xml  { render :xml => @menucategory.errors, :status => :unprocessable_entity }
       end
-    end
+     end
   end
-
-
-
 end
