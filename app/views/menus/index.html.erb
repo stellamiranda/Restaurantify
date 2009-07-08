@@ -14,15 +14,17 @@
     
      </dl>
       </td>
-
+ <%= hidden_field_tag :restaurant_id, @restaurant.id %>
       <td class="list-actions">
        
          <% if current_user %>
         <%= link_to 'Add Category',new_menu_menucategory_path(menu)  %><br/>
-         <%= link_to 'Edit', edit_menu_path(menu) %><br/>
+         <%= link_to 'Edit', edit_restaurant_menu_path(@restaurant,menu) %><br/>
         <%= link_to 'Destroy', menu,
                     :confirm => 'Are you sure?',
-                    :method => :delete %>
+                    :method => :delete,
+                    :action => :update
+                  %>
            <% end%>
       </td>
     </tr>

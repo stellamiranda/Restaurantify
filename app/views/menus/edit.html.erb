@@ -8,7 +8,7 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>
-
+ <%= hidden_field_tag :restaurant_id, @restaurant.id %>
   
   <p>
     <%= f.submit 'Update' %>
@@ -16,4 +16,4 @@
 <% end %>
 
 <%= link_to 'Show', @menu %> |
-<%= link_to 'Back', menus_path %>
+<%= link_to 'Back',restaurant_path(:restaurant_id => @restaurant.id) %>

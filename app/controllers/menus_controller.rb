@@ -14,7 +14,7 @@ class MenusController < ApplicationController
   def new
   
      @menus = Menu.new
-    
+      @restaurant = Restaurant.find(params[:restaurant_id])
   respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml =>  @menus }
@@ -23,6 +23,7 @@ class MenusController < ApplicationController
 
   def edit
     @menus = Menu.find(params[:id])
+    @restaurant = Restaurant.find(params[:restaurant_id])
   end
 
     def show
@@ -56,11 +57,12 @@ class MenusController < ApplicationController
 
   def update
     @menus =  Menu.find(params[:id])
-
+      @restaurant = Restaurant.find(params[:restaurant_id])
     respond_to do |format|
       if @menus.update_attributes(params[:menu])
         flash[:notice] = 'Menu was successfully updated.'
-        format.html { redirect_to(@menus) }
+        #format.html { redirect_to restaurants_path }
+        format.html { redirect_to restaurant_menus_path(@restaurant.id) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -71,14 +73,14 @@ class MenusController < ApplicationController
 
 
 
-   def destroy
+ def destroy
     @Menus = Menu.find(params[:id])
+    @restaurant =  @Menus.restaurant_id
     @Menus.destroy
-
     respond_to do |format|
-      format.html { redirect_to(menus_url) }
-      format.xml  { head :ok }
-    end
+    format.html { redirect_to restaurant_menus_path(@restaurant) }
+    format.xml  { head :ok }
+   end
   end
 
 

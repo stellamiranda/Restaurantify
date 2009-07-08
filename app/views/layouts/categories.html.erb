@@ -14,7 +14,13 @@
 <body>
 
 <p style="color: green"><%= flash[:notice] %></p>
-
+ <div id="sign">
+    <% if current_user%>
+       bienvenido <%=current_user.email%> <%= link_to 'Logout', sign_out_path %>
+    <% else %>
+     <%= link_to 'Login', sign_in_path %>
+    <% end %>
+  </div>
 <%= yield  %>
 
 </html>

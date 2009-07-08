@@ -4,8 +4,7 @@
   <%= f.error_messages %>
   <fieldset>
   <legend>Enter Menu Details</legend>
-  <p>
-  </p>
+ <%= hidden_field_tag :restaurant_id, @restaurant.id %>
     <p>
     <%= f.label :Menu %>:
     <%= f.text_field :name, :size => 40 %>
@@ -15,7 +14,7 @@
  </p>
   </fieldset>
   <p>
-  <%= link_to 'Back', menus_path %>
+  <%= link_to 'Back', restaurant_menus_path(@restaurant) %>
  </p>
 <% end %>
 
