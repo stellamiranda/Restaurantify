@@ -27,8 +27,8 @@ class MenusController < ApplicationController
   end
 
   def show
-#   @menus = Menu.find_by_restaurant_id('962')
-#    @menucategories = @menus.menucategories
+   @menus = Menu.find_by_restaurant_id('962')
+    @menucategories = @menus.menucategories
     #  @category = @menucategories.category.id
     @restaurant = Restaurant.find(params[:restaurant_id])
    
