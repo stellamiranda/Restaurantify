@@ -12,9 +12,10 @@ protected
       if current_user.id != @user.id
         flash[:error] = 'On, snap! Get outta here... '
         redirect_to restaurants_url
+        flash[:error] = 'On, snap! Get outta here... '
       end
     else
-      flash[:error] = 'No tiene usuario '
+        flash[:error] = 'No tiene usuario '
     end
   end
 

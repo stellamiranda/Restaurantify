@@ -1,6 +1,6 @@
 <div id="restaurant-form">
   <h3>Editing menu</h3>
-  <% form_for(@menus) do |f| %>
+  <% form_for([@restaurant,@menus]) do |f| %>
     <%= f.error_messages %>
     <p>
       <%= f.label :name %><br />
@@ -12,6 +12,6 @@
     </p>
   <% end %>
 
-  <%= link_to 'Show', @menu %> |
-  <%= link_to 'Back',restaurant_path(:restaurant_id => @restaurant.id) %>
+  <%= link_to 'Back',restaurant_path(@restaurant.id) %>
+
 </div>

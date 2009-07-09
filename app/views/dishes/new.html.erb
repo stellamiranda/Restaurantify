@@ -1,16 +1,24 @@
 <div id="restaurant-form">
   <% form_for(@diches) do |f| %>
     <%= f.error_messages %>
+     <%= hidden_field_tag :menu_id, params[:menu_id] %>
+     <%= hidden_field_tag :restaurant_id, params[:restaurant_id] %>
+     <%= hidden_field_tag :category_id, params[:category_id] %>
     <fieldset>
-      <legend>Enter Dish Details</legend>
+      <%@category =Category.find(params[:category_id])%>
+      <legend>Adding dish for menu <%=h @category.name%></legend>
+      <p>
+      </p>
       <p>
         <%= f.label :name %>:
         <%= f.text_field :name, :size => 40 %>
       </p>
+
       <p>
         <%= f.label :description %>:
         <%= f.text_area :description%>
       </p>
+
       <p>
         <%= f.label :price %>:
         <%= f.text_field :price, :size => 40 %>
@@ -19,12 +27,14 @@
         <%= f.label :Image %>:
         <%= f.text_field :image%>
       </p>
-        <%= f.label :menu %>:
-        <%= collection_select(:dish, :category_id,Category.all, :id, :name) %>
-      <p>
-        <%= f.submit "Add Dish" , :class => "submit" ,:redirect_to =>restaurants_url %>
+
+  <%#= f.label :Category %>
+ <%#= collection_select(:dish,:category_id,Category.find_all_by_id(params[:category_id]), :id, :name) %>
+ <p>
+       <%= f.submit "Add Dish" , :class => "submit"  %>
       </p>
     </fieldset>
   <% end %>
+
 </div>
 

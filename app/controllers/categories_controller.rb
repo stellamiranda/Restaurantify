@@ -30,6 +30,7 @@ before_filter :authenticate, :except => [:index]
 
   def create
     @categories = Category.new(params[:category])
+    
    respond_to do |format|
       if @categories.save
         flash[:notice] = 'Product was successfully created.'

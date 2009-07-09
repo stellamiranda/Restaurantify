@@ -31,11 +31,11 @@ class MenusController < ApplicationController
      @menucategories = @menus.menucategories
    #  @category = @menucategories.category.id
      @restaurant = Restaurant.find(params[:restaurant_id])
-     
-      respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml =>  @menus}
-     end
+     render :text => @menucategories.category
+#      respond_to do |format|
+#      format.html # show.html.erb
+#      format.xml  { render :xml =>  @menus}
+#     end
   end
 
 
@@ -61,7 +61,7 @@ class MenusController < ApplicationController
     respond_to do |format|
       if @menus.update_attributes(params[:menu])
         flash[:notice] = 'Menu was successfully updated.'
-        format.html { redirect_to restaurant_menus_path(@restaurant.id) }
+        format.html { redirect_to restaurant_path(@restaurant.id) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

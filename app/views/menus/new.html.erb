@@ -11,7 +11,8 @@
       </p>
     </fieldset>
     <p>
-      <%= link_to 'Back', restaurant_menus_path(@restaurant) %>
+      <%#= link_to 'Back', restaurant_menus_path(@restaurant) %>
+        <%= link_to 'Back',restaurant_path(@restaurant.id) %>
     </p>
   <% end %>
 </div>

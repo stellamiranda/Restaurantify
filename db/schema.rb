@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20090707203717) do
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "price",       :limit => 10, :precision => 10, :scale => 0
+    t.decimal  "price"
     t.integer  "category_id"
     t.string   "image"
   end
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20090707203717) do
     t.string   "address"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "owner_id"
     t.integer  "user_id"
   end
 
@@ -64,6 +65,8 @@ ActiveRecord::Schema.define(:version => 20090707203717) do
     t.boolean  "email_confirmed",                   :default => false, :null => false
   end
 
-  add_index "users", ["id"], :name => "index_users_on_id_and_token"
+  add_index "users", ["email"], :name => "index_users_on_email"
+  add_index "users", ["id", "token"], :name => "index_users_on_id_and_token"
+  add_index "users", ["token"], :name => "index_users_on_token"
 
 end

@@ -6,34 +6,32 @@
         </dl>
       </td>
     </table>
-  <% if current_user%>
-    <%= link_to "Add Category to this menu",
-      new_menu_menucategory_path(@menus) %>
-  <%end%>
+ <% if current_user%>
+      <%= link_to "Add Category to this menu",
+      new_menu_menucategory_path(@menus)%>
+   <%end%>
+
 
   <ul>
     <% for menucategory in @menucategories %>
       <li>
-      <h3><%=  menucategory.category.name %></h3>
+       <%@category = Category.find(menucategory.category.id)%>
+      <h3><%=  @category.name  %></h3>
       <ul>
-        <% for dish in menucategory.category.dishes %>
+        <% for dish in @category.dishes %>
           <li>
             <%= dish.name %>
           </li>
         <% end %>
       </ul>
-        <% if current_user%>
-          <%= link_to_remote "Add Dish to this category",
-                :url => new_dish_path,
-                :method => :get,
-                :update => "new_dish_form"
-          %>
-        <%end%>
+      <% if current_user%>
+        <%= link_to "Add Dish to this category",new_restaurant_menu_category_dish_path(params[:restaurant_id],@menus,menucategory.category)%>
+      <%end%>
+
       </li>
     <% end %>
   </ul>
 
 <div id="new_dish_form"></div>
-  <%= link_to 'Edit', edit_menu_path(@menus) %>
   <%= link_to 'Back', restaurant_path(@restaurant) %>
 </div>

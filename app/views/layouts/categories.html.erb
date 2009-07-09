@@ -12,7 +12,7 @@
 </head>
 <!-- END:head -->
 <body>
-
+ <div id="container">
 <p style="color: green"><%= flash[:notice] %></p>
  <div id="sign">
     <img src="/images/restaurantify.png">
@@ -24,5 +24,7 @@
     <% end %>
   </div>
 <%= yield  %>
+</div>
+</body>
 
 </html>
