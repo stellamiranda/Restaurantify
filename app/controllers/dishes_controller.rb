@@ -33,7 +33,7 @@ before_filter :authenticate, :except => [:index]
 
  def create
    @dishes = Dish.new(params[:dish])
-    respond_to do |format|
+  respond_to do |format|
       if @dishes.save
         flash[:notice] = 'Dish was successfully created.'
         format.html { redirect_to restaurant_menu_path(params[:restaurant_id] ,params[:menu_id]) }

@@ -3,8 +3,12 @@
     <%= f.error_messages %>
      <%= hidden_field_tag :menu_id, params[:menu_id] %>
      <%= hidden_field_tag :restaurant_id, params[:restaurant_id] %>
+
     <fieldset>
-      <legend>Enter Dish Details</legend>
+      <%@category =Category.find(params[:category_id])%>
+      <legend>Adding dish for menu <%=h @category.name%></legend>
+      <p>
+      </p>
       <p>
       </p>
       <p>
@@ -26,8 +30,13 @@
         <%= f.text_field :image%>
       </p>
 
+<<<<<<< HEAD:app/views/dishes/new.html.erb
+  <%#= f.label :Category %>
+ <%#= collection_select(:dish,:category_id,Category.find_all_by_id(params[:category_id]), :id, :name) %>
+=======
   <%= f.label :Category %>:
  <%= collection_select(:dish,:category_id,Category.find_all_by_id(params[:category_id]), :id, :name) %>
+>>>>>>> 605544d1e6b3cce46338d96619d8ff7725b08878:app/views/dishes/new.html.erb
  <p>
        <%= f.submit "Add Dish" , :class => "submit"  %>
       </p>

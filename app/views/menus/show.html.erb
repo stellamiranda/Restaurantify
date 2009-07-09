@@ -15,9 +15,10 @@
   <ul>
     <% for menucategory in @menucategories %>
       <li>
-      <h3><%=  menucategory.category.name %></h3>
+       <%@category = Category.find(menucategory.category.id)%>
+      <h3><%=  @category.name  %></h3>
       <ul>
-        <% for dish in menucategory.category.dishes %>
+        <% for dish in @category.dishes %>
           <li>
         <%= dish.name %>
          </li>
