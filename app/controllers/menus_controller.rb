@@ -26,29 +26,25 @@ class MenusController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
   end
 
-<<<<<<< HEAD:app/controllers/menus_controller.rb
+
   def show
    @menus = Menu.find_by_restaurant_id('962')
-    @menucategories = @menus.menucategories
-    #  @category = @menucategories.category.id
-    @restaurant = Restaurant.find(params[:restaurant_id])
+    
    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml =>  @menus}
     end
-=======
+
     def show
      @menus = Menu.find(params[:id])
-     @menucategories = @menus.menucategories
-   #  @category = @menucategories.category.id
-     @restaurant = Restaurant.find(params[:restaurant_id])
+     
      render :text => @menucategories.category
-#      respond_to do |format|
-#      format.html # show.html.erb
-#      format.xml  { render :xml =>  @menus}
-#     end
->>>>>>> 156f0e13af710a80529af73b094e29152a9d9162:app/controllers/menus_controller.rb
+      respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml =>  @menus}
+     end
+
   end
 
 
