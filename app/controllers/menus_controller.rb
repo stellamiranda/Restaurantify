@@ -61,7 +61,7 @@ class MenusController < ApplicationController
     respond_to do |format|
       if @menus.update_attributes(params[:menu])
         flash[:notice] = 'Menu was successfully updated.'
-        format.html { redirect_to restaurant_menus_path(@restaurant.id) }
+        format.html { redirect_to restaurant_path(@restaurant.id) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
