@@ -1,13 +1,14 @@
 <div class="restaurant-form">
 <% form_for([@menu, @menucategories]) do |f| %>
   <%= f.error_messages %>
-  <legend>Add category to menu </legend>
+  
+ <legend>Add category to menu </legend>
   <p>
     <%= f.label :Category %>:
     <%= collection_select(:menucategory, :category_id,Category.all, :id, :name) %>
     <%= f.submit "Add Category" , :class => "submit" %>
   </p>
-  <%= link_to 'New Category', new_category_path %>
+  <%= link_to 'New Category', new_category_path(:menus_id =>@menu.id) %>
   <p>
     <%#= link_to 'Back',restaurant_menus_path(:restaurant_id => @restaurant.id) %>
   </p>

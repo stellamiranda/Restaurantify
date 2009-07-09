@@ -6,7 +6,7 @@
         </dl>
       </td>
     </table>
- <% if current_user%>
+    <% if current_user.id==@restaurant.user_id%>
       <%= link_to "Add Category to this menu",
       new_menu_menucategory_path(@menus)%>
    <%end%>
@@ -19,13 +19,11 @@
       <ul>
         <% for dish in menucategory.category.dishes %>
           <li>
-      <% if(params[:restaurant_id]==@menus.restaurant_id and@menus.id==menucategory.menu_id and menucategory.category_id==dish.category_id)%>
-      <%= dish.name %>
+        <%= dish.name %>
          </li>
-         <%end%>
         <% end %>
       </ul>
-      <% if current_user%>
+   <% if current_user.id==@restaurant.user_id%>
         <%= link_to "Add Dish to this category",new_restaurant_menu_category_dish_path(params[:restaurant_id],@menus,menucategory.category)%>
       <%end%>
 

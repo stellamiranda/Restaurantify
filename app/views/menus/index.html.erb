@@ -2,7 +2,7 @@
   <% if @menus!=nil%>
     <h3> <%=h @restaurant.name%>'s menus</h3>
   <table>
-  <% for menu in @menus %>
+  <% for menu in @restaurant.menus %>
     <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
       <td class="list-description">
         <dl>

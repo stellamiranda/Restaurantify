@@ -36,6 +36,7 @@ public
       format.html # new.html.erb
       format.xml  { render :xml => @restaurant }
     end
+
   end
 
   def edit

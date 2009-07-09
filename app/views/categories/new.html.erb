@@ -1,6 +1,7 @@
 <div id="restaurant-form">
   <% form_for(@categories) do |f| %>
     <%= f.error_messages %>
+        <%= hidden_field_tag :menus_id,params[:menus_id] %>
     <fieldset>
       <legend>Enter Category Details</legend>
       <p>

@@ -30,10 +30,11 @@ before_filter :authenticate, :except => [:index]
 
   def create
     @categories = Category.new(params[:category])
+  
    respond_to do |format|
       if @categories.save
         flash[:notice] = 'Product was successfully created.'
-        format.html { redirect_to(@categories) }
+        format.html { redirect_to new_menu_menucategory_path(params[:menus_id]) }
         format.xml  { render :xml => @categories, :status => :created, :location => @categories }
       else
         format.html { render :action => "new" }

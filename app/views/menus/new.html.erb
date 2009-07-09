@@ -1,7 +1,7 @@
 <div class="restaurant-form">
   <% form_for [:restaurant,@menus] do |f| %>
     <%= f.error_messages %>
-    <fieldset>
+  <fieldset>
       <legend>Enter Menu Details</legend>
       <%= hidden_field_tag :restaurant_id, @restaurant.id %>
       <p>
