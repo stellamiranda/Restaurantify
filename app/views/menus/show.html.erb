@@ -20,8 +20,10 @@
       <ul>
         <% for dish in @category.dishes %>
           <li>
-            <%= dish.name %>
-          </li>
+      <% if(params[:restaurant_id]==@menus.restaurant_id and@menus.id==menucategory.menu_id and menucategory.category_id==dish.category_id)%>
+      <%= dish.name %>
+         </li>
+         <%end%>
         <% end %>
       </ul>
       <% if current_user%>
