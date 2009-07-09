@@ -14,6 +14,8 @@
 <body>
 
 <p style="color: green"><%= flash[:notice] %></p>
+ <img src="/images/restaurantify.png">
+    <h1></h1>
  <div id="sign">
     <% if current_user%>
        bienvenido <%=current_user.email%> <%= link_to 'Logout', sign_out_path %>

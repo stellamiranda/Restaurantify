@@ -1,32 +1,30 @@
-<p>
-  <b>Name:</b>
-  <%=h @categories.name %>
-</p>
-<% if @dishes!=nil%>
-  <table>
-  <% for dish in @dishes %>
-    <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-
-
-      <td class="list-description">
-        
+<div id="restaurant-list">
+  <p>
+    <b>Name:</b>
+    <%=h @categories.name %>
+  </p>
+  <% if @dishes!=nil%>
+    <table>
+    <% for dish in @dishes %>
+      <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+        <td class="list-description">
           <dt><%=h dish.name %></dt>
-      </td>
-
-      <td class="list-actions">
-        <%= link_to 'Show',dish %><br/>
-        <%= link_to 'Edit', edit_dish_path(dish) %><br/>
-        <%= link_to 'Destroy', dish,
-                    :confirm => 'Are you sure?',
-                    :method => :delete %>
-      </td>
-    </tr>
-  <% end %>
-  </table>
-<% else %>
-<%  flash[:notice] = 'No hay Menu.' %>
-<% end%>
-
-<p>
-<%= link_to 'Edit', edit_category_path(@categories) %> |
-</p>
+        </td>
+        <td class="list-actions">
+          <%= link_to 'Show',dish %><br/>
+          <%= link_to 'Edit', edit_dish_path(dish) %><br/>
+          <%= link_to 'Destroy', dish,
+                      :confirm => 'Are you sure?',
+                      :method => :delete %>
+        </td>
+      </tr>
+    <% end %>
+    </table>
+  <% else %>
+    <%  flash[:notice] = ' Menus do not exist.' %>
+  <% end%>
+  <br>
+  <p>
+    <%= link_to 'Edit', edit_category_path(@categories) %> |
+  </p>
+</div>

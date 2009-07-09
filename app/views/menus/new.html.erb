@@ -1,21 +1,17 @@
 <div class="restaurant-form">
-
-<% form_for [:restaurant,@menus] do |f| %>
-  <%= f.error_messages %>
-  <fieldset>
-  <legend>Enter Menu Details</legend>
- <%= hidden_field_tag :restaurant_id, @restaurant.id %>
+  <% form_for [:restaurant,@menus] do |f| %>
+    <%= f.error_messages %>
+    <fieldset>
+      <legend>Enter Menu Details</legend>
+      <%= hidden_field_tag :restaurant_id, @restaurant.id %>
+      <p>
+        <%= f.label :Menu %>:
+        <%= f.text_field :name, :size => 40 %>
+        <%= f.submit "Add Menu" , :class => "submit" %>
+      </p>
+    </fieldset>
     <p>
-    <%= f.label :Menu %>:
-    <%= f.text_field :name, :size => 40 %>
- 
-  
-    <%= f.submit "Add Menu" , :class => "submit" %>
- </p>
-  </fieldset>
-  <p>
-  <%= link_to 'Back', restaurant_menus_path(@restaurant) %>
- </p>
-<% end %>
-
+      <%= link_to 'Back', restaurant_menus_path(@restaurant) %>
+    </p>
+  <% end %>
 </div>

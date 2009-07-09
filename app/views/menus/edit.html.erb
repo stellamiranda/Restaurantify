@@ -1,19 +1,17 @@
-<img src="/images/restaurantify.png">
-<h3>Editing menu</h3>
+<div id="restaurant-form">
+  <h3>Editing menu</h3>
+  <% form_for(@menus) do |f| %>
+    <%= f.error_messages %>
+    <p>
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </p>
+    <%= hidden_field_tag :restaurant_id, @restaurant.id %>
+    <p>
+      <%= f.submit 'Update' %>
+    </p>
+  <% end %>
 
-<% form_for(@menus) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
- <%= hidden_field_tag :restaurant_id, @restaurant.id %>
-  
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
-
-<%= link_to 'Show', @menu %> |
-<%= link_to 'Back',restaurant_path(:restaurant_id => @restaurant.id) %>
+  <%= link_to 'Show', @menu %> |
+  <%= link_to 'Back',restaurant_path(:restaurant_id => @restaurant.id) %>
+</div>

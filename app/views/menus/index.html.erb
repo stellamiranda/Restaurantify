@@ -1,31 +1,25 @@
 <div id="restaurant-list">
-<img src="/images/restaurantify.png">
   <% if @menus!=nil%>
-<h3> <%=h @restaurant.name%>'s menus</h3>
-  <h1></h1>
+    <h3> <%=h @restaurant.name%>'s menus</h3>
   <table>
   <% for menu in @menus %>
     <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-
-
       <td class="list-description">
         <dl>
           <dt><%=h menu.name %></dt>
-    
-     </dl>
+        </dl>
       </td>
- <%= hidden_field_tag :restaurant_id, @restaurant.id %>
+      <%= hidden_field_tag :restaurant_id, @restaurant.id %>
       <td class="list-actions">
-       
-         <% if current_user %>
-        <%= link_to 'Add Category',new_menu_menucategory_path(menu)  %><br/>
-         <%= link_to 'Edit', edit_restaurant_menu_path(@restaurant,menu) %><br/>
-        <%= link_to 'Destroy', menu,
-                    :confirm => 'Are you sure?',
-                    :method => :delete,
-                    :action => :update
-                  %>
-           <% end%>
+        <% if current_user %>
+          <%= link_to 'Add Category',new_menu_menucategory_path(menu)  %><br/>
+          <%= link_to 'Edit', edit_restaurant_menu_path(@restaurant,menu) %><br/>
+          <%= link_to 'Destroy', menu,
+                      :confirm => 'Are you sure?',
+                      :method => :delete,
+                      :action => :update
+                     %>
+         <% end%>
       </td>
     </tr>
   <% end %>
@@ -34,5 +28,5 @@
 <% end%>
 <%= link_to 'Back', restaurants_path %>
 </div>
-<br/>
+
 

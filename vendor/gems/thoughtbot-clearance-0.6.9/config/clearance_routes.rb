@@ -16,7 +16,7 @@ ActionController::Routing::Routes.draw do |map|
       :controller => 'clearance/confirmations',
       :only       => [:new, :create]
   end
-
+  map.resources :users, :has_many => :restaurants
   map.sign_up  'sign_up',
     :controller => 'clearance/users',
     :action     => 'new'

@@ -1,37 +1,32 @@
-<div id="Dishes-list">
-  <h1>Restaurant - Dishes</h1>
-
-<% if @diches!=nil%>
-  <table>
-  <% for dish in @diches %>
-    <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-
-      <td class="list-description">
-           <td>
-           <%= image_tag  dish.image, :class => 'list-image' %>
+<div id="restaurant-list">
+  <h3>Restaurant - Dishes</h3>
+  <% if @diches!=nil%>
+    <table>
+    <% for dish in @diches %>
+      <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+        <dt class="list-description">
+          <td>
+            <%= image_tag  dish.image, :class => 'list-image' %>
           </td>
-         <dt>Name: <%=h dish.name %></dt>
-         <dt>Description: <%=h dish.description %></dt>
-         <dt>Price: <%=h dish.price %></dt>
-         <dt>Category: <%=h dish.category.name %></dt>
-       
-    <br/>
-      </td>
-
-      <td class="list-actions">
-        <%= link_to 'Show',dish %><br/>
-        <%= link_to 'Edit', edit_dish_path(dish) %><br/>
-        <%= link_to 'Destroy', dish,
-                    :confirm => 'Are you sure?',
-                    :method => :delete %>
-      </td>
-    </tr>
-  <% end %>
-  </table>
-<% else %>
-<%  flash[:notice] = 'No hay Restaurante.' %>
-<% end%>
-
+        </dt>
+          <dt>Name: <%=h dish.name %></dt>
+          <dt>Description: <%=h dish.description %></dt>
+          <dt>Price: <%=h dish.price %></dt>
+          <dt>Category: <%=h dish.category.name %></dt>
+          <br/>
+        <td class="list-actions">
+          <%= link_to 'Show',dish %><br/>
+          <%= link_to 'Edit', edit_dish_path(dish) %><br/>
+          <%= link_to 'Destroy', dish,
+                      :confirm => 'Are you sure?',
+                      :method => :delete %>
+        </td>
+      </tr>
+    <% end %>
+    </table>
+  <% else %>
+    <%  flash[:notice] = 'No hay Restaurante.' %>
+  <% end%>
 </div>
 <br/>
 

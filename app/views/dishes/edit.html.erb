@@ -1,32 +1,28 @@
-<h1>Editing Dishes</h1>
-
-<% form_for(@dishes) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
-  </p>
-
-  <p>
-    <%= f.label :price %><br />
-    <%= f.text_field :price %>
-  </p>
-
-   <p>
-     <%= f.label :menu %>:
-   <%= collection_select(:dish, :category_id,Category.all, :category_id, :name) %>
-  </p>
-
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
-
-<%= link_to 'Show', @diches %> |
-<%= link_to 'Back', dish_path %>
+<div id="restaurant-form">
+<h3>Editing Dishes</h3>
+  <% form_for(@dishes) do |f| %>
+    <%= f.error_messages %>
+    <p>
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :description %><br />
+      <%= f.text_field :description %>
+    </p>
+    <p>
+      <%= f.label :price %><br />
+      <%= f.text_field :price %>
+    </p>
+    <p>
+      <%= f.label :menu %>:
+      <%= collection_select(:dish, :category_id,Category.all, :category_id, :name) %>
+    </p>
+    <p>
+      <%= f.submit 'Update' %>
+    </p>
+  <% end %>
+  <br>
+  <%= link_to 'Show', @diches %> |
+  <%= link_to 'Back', dish_path %>
+</div>

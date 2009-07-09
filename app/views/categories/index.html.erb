@@ -1,19 +1,13 @@
 <div id="restaurant-list">
-  <img src="/images/restaurantify.png">
    <h3>Editing menu</h3>
-  <h1></h1>
-
   <table>
   <% for category in @categories %>
     <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-
-
       <td class="list-description">
         <dl>
           <dt><%=h category.name %></dt>
-     </dl>
+        </dl>
       </td>
-
       <td class="list-actions">
         <%= link_to 'Show',category %><br/>
         <%= link_to 'Edit',edit_category_path(@categories) %><br/>
@@ -22,17 +16,9 @@
                     :confirm => 'Are you sure?',
                     :method => :delete %>
       </td>
-
-
     </tr>
-
-
-    
-
   <% end %>
   </table>
+  <br />
+  <%= link_to 'New Category', new_category_path %>
 </div>
-
-<br />
- 
-<%= link_to 'New Category', new_category_path %>

@@ -1,28 +1,20 @@
 <div id="restaurant-list">
-
-  <img src="/images/restaurantify.png">
-  <h1></h1>
   <table>
     <% for restaurant in @restaurants %>
       <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-
-
         <td class="list-description">
           <dl>
             <dt><%= link_to restaurant.name, restaurant %></dt>
             <dd><%=h restaurant.address %></dd>
           </dl>
         </td>
-
         <td class="list-actions">
-          
-
           <% if current_user %>
             <%= link_to 'Add menu',  new_restaurant_menu_path(restaurant) %><br/>
             <%= link_to 'Edit', edit_restaurant_path(restaurant)%><br/>
             <%= link_to 'Destroy', restaurant,
-              :confirm => 'Are you sure?',
-              :method => :delete %>
+                         :confirm => 'Are you sure?',
+                         :method => :delete %>
           <% end %>
         </td>
       </tr>

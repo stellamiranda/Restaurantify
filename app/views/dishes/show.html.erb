@@ -1,19 +1,18 @@
-<p>
-  <b>Name:</b>
-  <%=h @dishes.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%=h @dishes.description %>
-</p>
-
-<p>
-  <b>Price:</b>
-  <%=h @dishes.price %>
-</p>
-
-
-<p>
-<%= link_to 'Edit', edit_dish_path(@dishes) %> |
-<%= link_to 'Back', dishes_path %>
+<div id="restaurant-list">
+  <p>
+    <b>Name:</b>
+    <%=h @dishes.name %>
+  </p>
+  <p>
+    <b>Description:</b>
+    <%=h @dishes.description %>
+  </p>
+  <p>
+    <b>Price:</b>
+    <%=h @dishes.price %>
+  </p>
+  <p>
+    <%= link_to 'Edit', edit_dish_path(@dishes) %> |
+    <%= link_to 'Back', dishes_path %>
+  </p>
+</div>

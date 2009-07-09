@@ -1,21 +1,19 @@
-<div class="depot-form">
-<% form_for(@categories) do |f| %>
-  <%= f.error_messages %>
-  <fieldset>
-  <legend>Enter Category Details</legend>
-
-    <p>
-    <%= f.label :name %>:
-    <%= f.text_field :name, :size => 40 %>
-  </p>
- 
-  <p>
-    <%= f.submit "Add Categories" , :class => "submit" %>
- </p>
-  </fieldset>
-  <p>
-   <%#= link_to 'Back', categories_path %>
+<div id="restaurant-form">
+  <% form_for(@categories) do |f| %>
+    <%= f.error_messages %>
+    <fieldset>
+      <legend>Enter Category Details</legend>
+      <p>
+        <%= f.label :name %>:
+        <%= f.text_field :name, :size => 40 %>
+      </p>
+      <p>
+        <%= f.submit "Add Categories" , :class => "submit" %>
+      </p>
+    </fieldset>
+   <p>
+     <%#= link_to 'Back', categories_path %>
    </p>
-<% end %>
-
+  <% end %>
+</div>
 

@@ -1,11 +1,7 @@
 <div class="restaurant-form">
-<img src="/images/restaurantify.png">
-<h1></h1>
 <h3>Editing restaurants</h3>
-
 <% form_for(@restaurants) do |f| %>
   <%= f.error_messages %>
-
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
@@ -14,12 +10,10 @@
     <%= f.label :Address %><br />
     <%= f.text_field :address %>
   </p>
-
   <p>
     <%= f.submit 'Update' %>
   </p>
 <% end %>
-
 <%= link_to 'Show', @restaurants %> |
 <%= link_to 'Back', restaurant_path %>
 </div>

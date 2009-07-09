@@ -1,6 +1,4 @@
 <div id="restaurant-list">
-<img src="/images/restaurantify.png">
-<h1></h1>
 <table>
   <td class="list-name">
     <dl>
@@ -12,7 +10,7 @@
   <table>
   <% for menu in @menus %>
     <% if menu.restaurant_id == @restaurants.id%>
-      <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+       <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
         <td class="list-description">
           <dl>
             <dt><%=h menu.name %></dt>
@@ -31,7 +29,6 @@
   <% end %>
   </table>
 <% else %>
-
 <% end%>
 <br />
 <%= link_to 'Back', restaurants_path %>

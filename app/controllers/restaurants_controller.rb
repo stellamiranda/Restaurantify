@@ -8,10 +8,7 @@ protected
   def can_only_edit_self
     @restaurant = Restaurant.find(params[:id])
     @user = @restaurant.user
-    if @user != nil
-      puts "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP"
-      puts current_user.id
-      puts @user.id
+   if @user != nil
       if current_user.id != @user.id
         flash[:error] = 'On, snap! Get outta here... '
         redirect_to restaurants_url
@@ -25,8 +22,7 @@ public
 
   def index
    @restaurants = Restaurant.find(:all)
-   
-
+    
  respond_to do |format|
        format.html
      format.xml  { render :xml => @restaurants}
@@ -34,10 +30,10 @@ public
   end
 
   def new
-    @restaurants = Restaurant.new
+    @restaurant = Restaurant.new
   respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @restaurants }
+      format.xml  { render :xml => @restaurant }
     end
   end
 
@@ -56,20 +52,24 @@ public
   end
 
 
-    def create
-    @restaurants = Restaurant.new(params[:restaurant])
-   
-    respond_to do |format|
-      if @restaurants.save
-        flash[:notice] = 'Product was successfully created.'
-        format.html { redirect_to(@restaurants) }
-        format.xml  { render :xml => @restaurants, :status => :created, :location => @restaurants }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml =>@restaurants.errors, :status => :unprocessable_entity }
-      end
+def create
+  #  @restaurant = @user.restaurant.create(params[:restaurant])
+  #@restaurants = Restaurant.new(params[:restaurant])
+  #render :text => @restaurant.name
+ @user = current_user
+ @restaurant = Restaurant.new(params[:restaurant])
+ @restaurants = Restaurant.create("name" =>@restaurant.name, "address" => @restaurant.address, "user_id"=>@user.id)
+  respond_to do |format|
+    if @restaurants.save
+      flash[:notice] = 'Product was successfully created.'
+      format.html { redirect_to(@restaurants) }
+      format.xml  { render :xml => @restaurants, :status => :created, :location => @restaurants }
+    else
+      format.html { render :action => "new" }
+      format.xml  { render :xml =>@restaurants.errors, :status => :unprocessable_entity }
     end
   end
+end
 
 
     def update

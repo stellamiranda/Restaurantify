@@ -1,20 +1,16 @@
-<div id="new">
+<div id="restaurant-form">
   <% form_for(@diches) do |f| %>
     <%= f.error_messages %>
     <fieldset>
       <legend>Enter Dish Details</legend>
       <p>
-      </p>
-      <p>
         <%= f.label :name %>:
         <%= f.text_field :name, :size => 40 %>
       </p>
-
       <p>
         <%= f.label :description %>:
         <%= f.text_area :description%>
       </p>
-
       <p>
         <%= f.label :price %>:
         <%= f.text_field :price, :size => 40 %>
@@ -23,11 +19,10 @@
         <%= f.label :Image %>:
         <%= f.text_field :image%>
       </p>
-      <%= f.label :menu %>:
-      <%= collection_select(:dish, :category_id,Category.all, :id, :name) %>
-
+        <%= f.label :menu %>:
+        <%= collection_select(:dish, :category_id,Category.all, :id, :name) %>
       <p>
-       <%= f.submit "Add Dish" , :class => "submit" ,:redirect_to =>restaurants_url %>
+        <%= f.submit "Add Dish" , :class => "submit" ,:redirect_to =>restaurants_url %>
       </p>
     </fieldset>
   <% end %>
