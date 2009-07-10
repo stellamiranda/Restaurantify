@@ -1,5 +1,5 @@
 class MenusController < ApplicationController
- 
+
   before_filter :authenticate, :except => [:index, :show]
   def index
     @menus = Menu.all
@@ -12,7 +12,7 @@ class MenusController < ApplicationController
 
 
   def new
-  
+
     @menus = Menu.new
     @restaurant = Restaurant.find(params[:restaurant_id])
     respond_to do |format|
@@ -27,19 +27,19 @@ class MenusController < ApplicationController
   end
 
 
-    def show
-     @menus = Menu.find(params[:id])
-     
+  def show
+    @menus = Menu.find(params[:id])
+    @menucategories = @menus.menucategories
+    @restaurant = Restaurant.find(params[:restaurant_id])
       respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml =>  @menus}
-     end
-
     end
+   end
 
 
   def create
- 
+
     @restaurant = Restaurant.find(params[:restaurant_id])
     @menus = @restaurant.menus.create(params[:menu])
     respond_to do |format|
