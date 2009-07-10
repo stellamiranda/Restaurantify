@@ -23,8 +23,7 @@ public
 
   def index
    @restaurants = Restaurant.find(:all)
-    
- respond_to do |format|
+  respond_to do |format|
        format.html
      format.xml  { render :xml => @restaurants}
     end
