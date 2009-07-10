@@ -27,25 +27,15 @@ class MenusController < ApplicationController
   end
 
 
-  def show
-   @menus = Menu.find_by_restaurant_id('962')
-    
-   
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml =>  @menus}
-    end
-
     def show
      @menus = Menu.find(params[:id])
      
-     render :text => @menucategories.category
       respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml =>  @menus}
      end
 
-  end
+    end
 
 
   def create
