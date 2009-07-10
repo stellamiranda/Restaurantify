@@ -32,7 +32,7 @@ class MenusController < ApplicationController
     @menucategories = @menus.menucategories
     @restaurant = Restaurant.find(params[:restaurant_id])
       respond_to do |format|
-      format.html # show.html.erb
+      format.html 
       format.xml  { render :xml =>  @menus}
     end
    end
