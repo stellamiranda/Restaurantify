@@ -13,6 +13,11 @@ Rails::Initializer.run do |config|
   :source  => 'http://gems.github.com',
   :version => '0.6.9'
 
+  config.gem "thoughtbot-shoulda",
+  :lib => 'shoulda',
+  :source => 'http://gems.github.com'
+#  :version => '2.10.1'
+
   DO_NOT_REPLY = "donotreply@example.com"
   
 end
