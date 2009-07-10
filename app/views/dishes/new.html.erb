@@ -3,14 +3,12 @@
     <%= f.error_messages %>
      <%= hidden_field_tag :menu_id, params[:menu_id] %>
      <%= hidden_field_tag :restaurant_id, params[:restaurant_id] %>
+     <%= hidden_field_tag :category_id, params[:category_id] %>
 
     <fieldset>
       <%@category =Category.find(params[:category_id])%>
       <legend>Adding dish for menu <%=h @category.name%></legend>
-      <p>
-      </p>
-      <p>
-      </p>
+        
       <p>
         <%= f.label :name %>:
         <%= f.text_field :name, :size => 40 %>
@@ -29,11 +27,12 @@
         <%= f.label :Image %>:
         <%= f.text_field :image%>
       </p>
-      <p>
+
+ 
+ <p>
        <%= f.submit "Add Dish" , :class => "submit"  %>
       </p>
     </fieldset>
   <% end %>
 
 </div>
-

@@ -29,20 +29,22 @@ before_filter :authenticate, :except => [:index]
       format.xml  { render :xml => @dishes}
     end
   end
-
-
+  
  def create
-   @dishes = Dish.new(params[:dish])
-  respond_to do |format|
-      if @dishes.save
-        flash[:notice] = 'Dish was successfully created.'
-        format.html { redirect_to restaurant_menu_path(params[:restaurant_id] ,params[:menu_id]) }
-        format.xml  { render :xml => @dishes, :status => :created, :location => @dishes }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml =>@dishes.errors, :status => :unprocessable_entity }
-      end
-    end
+
+   @category = Category.find(params[:category_id])
+   @dishes = @category.dishes.create(params[:dish])
+
+   respond_to do |format|
+     if @dishes.save
+       flash[:notice] = 'Dish was successfully created.'
+       format.html { redirect_to restaurant_menu_path(params[:restaurant_id] ,params[:menu_id]) }
+       format.xml  { render :xml => @dishes, :status => :created, :location => @dishes }
+     else
+       format.html { render :action => "new" }
+       format.xml  { render :xml =>@dishes.errors, :status => :unprocessable_entity }
+     end
+   end
   end
 
     def update

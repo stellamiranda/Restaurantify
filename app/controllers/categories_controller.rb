@@ -30,12 +30,7 @@ before_filter :authenticate, :except => [:index]
 
   def create
     @categories = Category.new(params[:category])
-<<<<<<< HEAD:app/controllers/categories_controller.rb
-  
-=======
-    
->>>>>>> 156f0e13af710a80529af73b094e29152a9d9162:app/controllers/categories_controller.rb
-   respond_to do |format|
+    respond_to do |format|
       if @categories.save
         flash[:notice] = 'Product was successfully created.'
         format.html { redirect_to new_menu_menucategory_path(params[:menus_id]) }
