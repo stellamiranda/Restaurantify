@@ -9,24 +9,20 @@
           </dl>
         </td>
         <td class="list-actions">
-          <%if current_user%>
-          <% if current_user.id==restaurant.user_id %>
-            <%= link_to 'Add menu',  new_restaurant_menu_path(restaurant) %><br/>
+         <% if current_user.id==restaurant.user_id %>
+           <%= link_to 'Add menu',  new_restaurant_menu_path(restaurant) %><br/>
             <%= link_to 'Edit', edit_restaurant_path(restaurant)%><br/>
             <%= link_to 'Destroy', restaurant,
                          :confirm => 'Are you sure?',
                          :method => :delete %>
           <% end %>
-          <%end%>
-        </td>
-      </tr>
-    <% end %>
+     <% end %>
+ </td>
+  </tr>
+
   </table>
   <br /> <br />
   <%= link_to 'New restaurant', new_restaurant_path %>
-
-
-
 </div>
 
 
